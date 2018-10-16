@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png" sizes="64x64" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
     <canvas id="canvas"></canvas>
@@ -18,12 +20,17 @@
             <div id="event_by"><span> | </span>A Coding Club Event</div>
             </div>
         </div>
-        <div id="play_btn"><a href="./round1.html"> >> Get to the play zone!</a></div>
+        <div id="play_btn"><a onclick="signIn()"> >> Get to the play zone!</a></div>
         <div id="club"><img src="images/club.svg"></div>
         <!-- <iframe src="https://cross-origin.com/myvideo.html" style="display:none;" allow="autoplay">
         <audio id="my_audio" src="SG.mp3" type="audio/mpeg"></audio>
         <button id="test-btn" type="button" style="z-index:-1;opacity:0;position: absolute;left:-1000px;"></button> -->
     </div>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
+    <script src="./js/firebase.js" type="text/javascript"></script>
+    <script src="./js/auth.js" type="text/javascript"></script>
     <script src="./js/script.js" type="text/javascript"></script>
 </body>
 </html>
