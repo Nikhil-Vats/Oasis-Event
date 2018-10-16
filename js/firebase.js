@@ -13,8 +13,9 @@ var config = {
   var provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().languageCode = 'pt';
   firebase.auth().useDeviceLanguage();
-  if(signInStatus == 0) {
+
   function signIn () {
+    if(signInStatus == 0) {     
   firebase.auth().signInWithRedirect(provider);
   
   firebase.auth().getRedirectResult().then(function(result) {
@@ -27,6 +28,7 @@ var config = {
       var user = result.user;
       console.log(user);
       signInStatus = 1;
+      alert(signInStatus);
       window.location.href= 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
     }).catch(function(error) {
       // Handle Errors here.
