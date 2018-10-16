@@ -26,7 +26,7 @@ firebase.auth().getRedirectResult().then(function(result) {
     // The signed-in user info.
     var user = result.user;
     alert(user);
-    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html/';
+    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
     alert(1);
   }).catch(function(error) {
     // Handle Errors here.
