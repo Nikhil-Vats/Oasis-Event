@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Graduate');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+}
+
+#canvas {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    background: transparent;
+}
+
+#homepage {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: black;
+    z-index: 2;
+    /* background: url('../images/avengers3.jpg'); */
+    background-size: cover;
+    background-position: center;
+}
+
+#fest {
+    position: absolute;
+    top: 2vh;
+    left: 2vw;
+}
+
+#fest img {
+    width: 6vw;
+    height: 6vw;
+}
+
+#heading {
+    width: 70vw;
+    height: 50vh;
+    position: absolute;
+    left: 15vw;
+    top: 25vh;
+    background-color: transparent;
+    animation: lastGlow 1s 3s 1 forwards;
+}
+
+div.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+  div.loader p {
+    margin: 1em 0 0 0;
+    font-size: 16px;
+  }
+  
+  div.logo {
+    box-sizing: border-box;
+    position: relative;
+    background-color: white;
+  }
+  div.logo::before, div.logo::after {
+    z-index: 1;
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    border: 4px solid transparent;
+    width: 0;
+    height: 0;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
+  div.logo::before {
+    top: 0;
+    left: 0;
+    animation: border-before 3s 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+  }
+  div.logo::after {
+    bottom: 0;
+    right: 0;
+    animation: border-after 3s 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes lastGlow {
+      0% {
+          box-shadow: none;
+      }
+      100% {
+          border: #ffeb3b;
+          box-shadow: inset 0 0 5px #ffeb3b,inset 0 0 6px #ffeb3b,inset 0 0 7px #ffeb3b,inset 0 0 8px #ffeb3b,inset 0 0 9px #ffeb3b,inset 0 0 10px #ffeb3b,inset 0 0 12px #ffeb3b,0 0 5px #ffeb3b, 0 0 6px #ffeb3b, 0 0 7px #ffeb3b, 0 0 8px #ffeb3b, 0 0 9px #ffeb3b, 0 0 10px #ffeb3b, 0 0 12px #ffeb3b;          
+      }
+  }
+  
+  @keyframes border-before {
+    0% {
+      width: 0;
+      height: 0;
+      border-top-color: white;
+      border-right-color: transparent;
+    }
+    24.99% {
+      border-right-color: transparent;
+    }
+    25% {
+      height: 0;
+      width: 100%;
+      border-top-color: white;
+      border-right-color: white;
+    }
+    50%,
+    100% {
+      width: 100%;
+      height: 100%;
+      border-top-color: white;
+      border-right-color: white;
+      /* box-shadow: inset 0 0 5px #fff,inset 0 0 6px #fff,inset 0 0 7px #ffeb3b,inset 0 0 8px #ffeb3b,inset 0 0 9px #ffeb3b,inset 0 0 10px #ffeb3b,inset 0 0 12px #ffeb3b,0 0 5px #fff, 0 0 6px #fff, 0 0 7px #ffeb3b, 0 0 8px #ffeb3b, 0 0 9px #ffeb3b, 0 0 10px #ffeb3b, 0 0 12px #ffeb3b; */
+    }
+  }
+  @keyframes border-after {
+    0%,
+    49.99% {
+      width: 0;
+      height: 0;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+    }
+    50% {
+      width: 0;
+      height: 0;
+      border-left-color: transparent;
+      border-bottom-color: white;
+    }
+    74.99% {
+      border-left-color: transparent;
+      border-bottom-color: white;
+    }
+    75% {
+      height: 0;
+      width: 100%;
+      border-left-color: white;
+      border-bottom-color: white;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      border-left-color: white;
+      border-bottom-color: white;  
+    }
+  }
+
+#event_name {
+    margin-top: 10vh;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    font-size: 7vw;
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;
+    animation: fillIn 1s 3s ease-in-out 1 forwards;
+}
+
+@keyframes fillIn {
+    from {
+        color: white;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;
+    }
+    to {
+        color: #f44336;
+        text-shadow: 0 0 5px #f44336, 0 0 10px #f44336, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;  
+    }
+}
+
+#descrip {
+    margin-top: 30vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#fest_name {
+    font-size: 3vw;
+    color: white;
+    padding-right: 10px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4caf50, 0 0 30px #4caf50, 0 0 40px #4caf50, 0 0 55px #4caf50, 0 0 75px #4caf50;
+    animation: fillIn1 1s 3s ease-in-out 1 forwards;
+}
+
+#event_by {
+    font-size: 3vw;
+    color: white;
+    padding-left: 10px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
+    animation: fillIn2 1s 3s ease-in-out 1 forwards;
+}
+
+#event_by span {
+    color: #f44336;
+    text-shadow: 0 0 5px #f44336, 0 0 10px #f44336, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;   
+}
+
+@keyframes fillIn1 {
+    from {
+        color: white;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4caf50, 0 0 30px #4caf50, 0 0 40px #4caf50, 0 0 55px #4caf50, 0 0 75px #4caf50;
+    }
+    to {
+        color: #4caf50;
+        text-shadow: 0 0 5px #4caf50, 0 0 10px #4caf50, 0 0 20px #4caf50, 0 0 30px #4caf50, 0 0 40px #4caf50, 0 0 55px #4caf50, 0 0 75px #4caf50;
+    }
+}
+
+@keyframes fillIn2 {
+    from {
+        color: white;
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
+    }
+    to {
+        color: #4dd0e1;
+        text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
+    }
+}
+
+#club {
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    bottom: 2vw;
+    right: 2vw;
+}
+
+#play_btn {
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    /* border: #4dd0e1; */
+    /* box-shadow: inset 0 0 5px #4dd0e1,inset 0 0 6px #4dd0e1,inset 0 0 7px #4dd0e1,inset 0 0 8px #4dd0e1,inset 0 0 9px #4dd0e1,inset 0 0 10px #4dd0e1,inset 0 0 12px #4dd0e1,0 0 5px #4dd0e1, 0 0 6px #4dd0e1, 0 0 7px #4dd0e1, 0 0 8px #4dd0e1, 0 0 9px #4dd0e1, 0 0 10px #4dd0e1, 0 0 12px #4dd0e1;           */
+}
+
+#play_btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 3vw;
+    transition: 0.25s ease-in-out;
+    font-family: 'Bangers', cursive;
+    text-shadow: 0 0 2px #4dd0e1, 0 0 2px #4dd0e1, 0 0 2px #4dd0e1, 0 0 4px #4dd0e1, 0 0 5px #4dd0e1, 0 0 7px #4dd0e1, 0 0 8px #4dd0e1;
+}
+
+/* #play_btn a:before {
+    content: '';
+    transition: transform 250ms ease-in-out;
+} */
+
+#play_btn a:after {
+    display:block;
+    content: '';
+    border-bottom: solid 1px white;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+#play_btn a:hover:after {  
+    transform: scaleX(1);  
+}
+
+/* #play_btn a:hover:before {
+    content: ' >> ';
+} */
+
+#play_btn a:after {  
+    transform-origin:  0% 50%; 
+    box-shadow: inset 0 0 5px #4dd0e1,inset 0 0 6px #4dd0e1,inset 0 0 7px #4dd0e1,inset 0 0 8px #4dd0e1,inset 0 0 9px #4dd0e1,inset 0 0 10px #4dd0e1,inset 0 0 12px #4dd0e1,0 0 5px #4dd0e1, 0 0 6px #4dd0e1, 0 0 7px #4dd0e1, 0 0 8px #4dd0e1, 0 0 9px #4dd0e1, 0 0 10px #4dd0e1, 0 0 12px #4dd0e1;
+}
+
+#play_btn a:hover {
+    color: white;
+    text-shadow: 0 0 2px #fff, 0 0 5px #fff, 0 0 7px #4dd0e1, 0 0 10px #4dd0e1, 0 0 15px #4dd0e1, 0 0 15px #4dd0e1, 0 0 20px #4dd0e1;
+}
+
+
+
+
+
+
+/* -----------------------------------------------  ROUND 1  ------------------------------------------- */
+
+
+
+
+
+
+.top_nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 12vh;
+}
+
+#fest_icon img {
+    width: 4vw;
+    height: 4vw;
+    padding-left: 1vw;
+}
+
+.round_name {
+    position: relative;
+    left: 43%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
+}
+
+#instructions_btn img {
+    position: absolute;
+    right: 2vw;
+    top: 1vh;
+    cursor: help;
+    width: 4vw;
+    height: 4vw;
+    transition: 0.3s ease-in-out;
+}
+
+#instructions_btn img:hover {
+    box-shadow: inset 0 0 5px #fff,inset 0 0 6px #fff,inset 0 0 7px #ffeb3b,inset 0 0 8px #ffeb3b,inset 0 0 9px #ffeb3b,inset 0 0 10px #ffeb3b,inset 0 0 12px #ffeb3b,0 0 5px #fff, 0 0 6px #fff, 0 0 7px #ffeb3b, 0 0 8px #ffeb3b, 0 0 9px #ffeb3b, 0 0 10px #ffeb3b, 0 0 12px #ffeb3b;
+}
+
+.container {
+    background-color: #000019;
+    height: 88vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 12vh;
+}
