@@ -8,14 +8,33 @@ var config = {
     storageBucket: "oasis-event.appspot.com",
     messagingSenderId: "1027347694569"
   };
-  firebase.initializeApp(config);
-  var provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().languageCode = 'pt';
-  firebase.auth().useDeviceLanguage();
 
-  function signIn () {
-  firebase.auth().signInWithRedirect(provider);
-  }  
+firebase.initializeApp(config);
+var provider = new firebase.auth.GoogleAuthProvider();
+firebase.auth().languageCode = 'pt';
+firebase.auth().useDeviceLanguage();
+
+function signIn () {
+firebase.auth().signInWithRedirect(provider).then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    // ...
+    console.log(user);
+    alert(user);
+    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html/';
+  }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+  });
+}  
   
 var db = firebase.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
