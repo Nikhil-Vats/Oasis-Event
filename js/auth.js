@@ -32,6 +32,7 @@ firebase.auth().getRedirectResult().then(function(result) {
     console.log(user);
     window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
     signIn_status = 1;
+    alert(signIn_status);
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
