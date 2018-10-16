@@ -16,6 +16,7 @@ firebase.auth().useDeviceLanguage();
 
 function signIn () {
 firebase.auth().signInWithRedirect(provider);
+alert(4);
 firebase.auth().getRedirectResult().then(function(result) {
     if (result.credential) {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -26,8 +27,10 @@ firebase.auth().getRedirectResult().then(function(result) {
     var user = result.user;
     alert(user);
     window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html/';
+    alert(1);
   }).catch(function(error) {
     // Handle Errors here.
+    alert(7);
     var errorCode = error.code;
     var errorMessage = error.message;
     // The email of the user's account used.
