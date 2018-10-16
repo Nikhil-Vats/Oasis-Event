@@ -32,6 +32,7 @@ var config = {
       window.location.href= 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
     }).catch(function(error) {
       // Handle Errors here.
+      alert(2);
       var errorCode = error.code;
       var errorMessage = error.message;
       // The email of the user's account used.
