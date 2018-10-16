@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Graduate');
 @import url('https://fonts.googleapis.com/css?family=Bangers');
 
+@import url('https://fonts.googleapis.com/css?family=Vibur');
+@font-face {
+  font-family: decade;
+  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/decade.ttf');
+}
 
 body {
     margin: 0;
@@ -38,11 +43,10 @@ body {
 #homepage {
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed ;
     left: 0;
     right: 0;
-    background: black;
-    z-index: 2;
+    z-index:3;
     /* background: url('../images/avengers3.jpg'); */
     background-size: cover;
     background-position: center;
@@ -192,11 +196,13 @@ div.loader {
     width: 100%;
     padding: 0 20px;
     font-size: 7vw;
-    color: white;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;
-    animation: fillIn 1s 3s ease-in-out 1 forwards;
-}
 
+  /*  color: white;
+
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;
+    animation: fillIn 1s 3s ease-in-out 1 forwards;*/
+}
+/*
 @keyframes fillIn {
     from {
         color: white;
@@ -207,7 +213,71 @@ div.loader {
         text-shadow: 0 0 5px #f44336, 0 0 10px #f44336, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;  
     }
 }
+*/
 
+ 
+    #shadow {
+      
+    margin-top: 10vh;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+        font-size: 5em;
+        letter-spacing: 20px;
+        font-family: Bad Script;
+        color: #fff;
+    }
+
+    
+
+    #shadow {
+        text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+
+   #glow {
+        animation: neon1 linear infinite 2s;
+        will-change: opacity;
+    }
+
+    #blink {
+        animation: blink linear infinite 2s;
+    }
+
+
+    @keyframes neon1 {
+        20% {
+            opacity: 1;
+        }
+        80% {
+            opacity: 0.6;
+        }
+    }
+
+
+    @keyframes blink {
+        70% {
+            opacity: 1;
+        }
+        79% {
+            opacity: 0;
+        }
+        81% {
+            opacity: 1;
+        }
+        82% {
+            opacity: 0;
+        }
+        83% {
+            opacity: 1;
+        }
+        92% {
+            opacity: 0;
+        }
+        92.5% {
+            opacity: 1;
+        }
+    }
 #descrip {
     margin-top: 30vh;
     display: flex;
@@ -219,25 +289,46 @@ div.loader {
 
 #fest_name {
     font-size: 3vw;
-    color: white;
+        font-family: "Vibur", cursive;
     padding-right: 10px;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4caf50, 0 0 30px #4caf50, 0 0 40px #4caf50, 0 0 55px #4caf50, 0 0 75px #4caf50;
-    animation: fillIn1 1s 3s ease-in-out 1 forwards;
+       color: #c6e2ff;
+    animation: neon .08s ease-in-out infinite alternate;
 }
 
 #event_by {
     font-size: 3vw;
     color: white;
     padding-left: 10px;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
-    animation: fillIn2 1s 3s ease-in-out 1 forwards;
+     color: #c6e2ff;
+    animation: neon .08s ease-in-out infinite alternate;
 }
 
 #event_by span {
-    color: #f44336;
-    text-shadow: 0 0 5px #f44336, 0 0 10px #f44336, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;   
+    color: red;
+
 }
 
+@keyframes neon {
+  from {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
+  }
+  to {
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.98),
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1);
+  }
+}
+/*
 @keyframes fillIn1 {
     from {
         color: white;
@@ -259,7 +350,7 @@ div.loader {
         text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
     }
 }
-
+*/
 #club {
     width: 5vw;
     height: 5vw;
@@ -517,4 +608,71 @@ form > :first-child {
     border: 1px solid white;
     box-shadow: 0 0 5px #4dd0e1, 0 0 6px #4dd0e1, 0 0 7px #4dd0e1, 0 0 8px #4dd0e1, 0 0 9px #4dd0e1, 0 0 10px #4dd0e1, 0 0 12px #4dd0e1; 
     text-shadow: 0 0 5px #4dd0e1, 0 0 8px #4dd0e1, 0 0 10px #4dd0e1, 0 0 15px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1;
+}
+
+
+
+
+
+.shaky{
+  position:relative;
+  width:100%;
+  height:100vh;
+  background:url("https://images.unsplash.com/photo-1504662880849-32592cd4884e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=36c3d810c26fa6d391a19e11da9e3db8&auto=format&fit=crop&w=1500&q=80");
+  background-size:cover;
+  opacity:0.8; 
+
+}
+.shaky:before{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:url("https://images.unsplash.com/photo-1504662880849-32592cd4884e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=36c3d810c26fa6d391a19e11da9e3db8&auto=format&fit=crop&w=1500&q=80");
+  background-size:cover;
+  opacity:.5;
+}
+.shaky{
+  animation:animate 0.6s infinite;
+}
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+    filter:hue-rotate(0deg);
+  }
+  10%{
+    background-position: 4px 0;
+  }
+  20%{
+    background-position: -4px 0;
+  }
+  30%{
+    background-position: 12px 0;
+  }
+  40%{
+    background-position: -16px 0;
+  }
+  50%{
+    background-position: -24px 0;
+  }
+  60%{
+    background-position: -52px 0;
+  }
+  70%{
+    background-position: 0 22px;
+  }
+  80%{
+    background-position: -40px -10px;
+  }
+  100%{
+    background-position: 0 0;
+    filter:hue-rotate(360deg);
+  }
+}
+.shaky:hover{
+  -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
 }
