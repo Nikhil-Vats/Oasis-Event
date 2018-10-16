@@ -15,13 +15,15 @@ firebase.auth().languageCode = 'pt';
 firebase.auth().useDeviceLanguage();
 
 function signIn () {
-firebase.auth().signInWithRedirect(provider).then(function(result) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
+firebase.auth().signInWithRedirect(provider);
+firebase.auth().getRedirectResult().then(function(result) {
+    if (result.credential) {
+      // This gives you a Google Access Token. You can use it to access the Google API.
+      var token = result.credential.accessToken;
+      // ...
+    }
     // The signed-in user info.
     var user = result.user;
-    // ...
-    console.log(user);
     alert(user);
     window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html/';
   }).catch(function(error) {
