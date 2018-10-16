@@ -1,46 +1,46 @@
-var provider = new firebase.auth.GoogleAuthProvider();
-firebase.auth().languageCode = 'pt';
-firebase.auth().useDeviceLanguage();
+// var provider = new firebase.auth.GoogleAuthProvider();
+// firebase.auth().languageCode = 'pt';
+// firebase.auth().useDeviceLanguage();
 
-function signIn () {
-firebase.auth().signInWithRedirect(provider).then(function(result) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    console.log(user);
-    // ...
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-var signIn_status = 0;
-firebase.auth().getRedirectResult().then(function(result) {
-    if (result.credential) {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      var token = result.credential.accessToken;
-      // ...
-    }
-    // The signed-in user info.
-    var user = result.user;
-    console.log(user);
-    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
-    signIn_status = 1;
-    alert(signIn_status);
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-}  
+// function signIn () {
+// firebase.auth().signInWithRedirect(provider).then(function(result) {
+//     // This gives you a Google Access Token. You can use it to access the Google API.
+//     var token = result.credential.accessToken;
+//     // The signed-in user info.
+//     var user = result.user;
+//     console.log(user);
+//     // ...
+//   }).catch(function(error) {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     // The email of the user's account used.
+//     var email = error.email;
+//     // The firebase.auth.AuthCredential type that was used.
+//     var credential = error.credential;
+//     // ...
+//   });
+// var signIn_status = 0;
+// firebase.auth().getRedirectResult().then(function(result) {
+//     if (result.credential) {
+//       // This gives you a Google Access Token. You can use it to access the Google API.
+//       var token = result.credential.accessToken;
+//       // ...
+//     }
+//     // The signed-in user info.
+//     var user = result.user;
+//     console.log(user);
+//     window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
+//     signIn_status = 1;
+//     alert(signIn_status);
+//   }).catch(function(error) {
+//     // Handle Errors here.
+//     var errorCode = error.code;
+//     var errorMessage = error.message;
+//     // The email of the user's account used.
+//     var email = error.email;
+//     // The firebase.auth.AuthCredential type that was used.
+//     var credential = error.credential;
+//     // ...
+//   });
+// }  
