@@ -61,14 +61,6 @@
     <script src="./js/firebase.js" type="text/javascript"></script>
     <script src="./js/auth.js" type="text/javascript"></script>
     <script>
-        if(signInStatus == 1) {
-            document.body.style.display = 'block';
-        }
-        else {
-            document.body.style.display = 'none';
-            alert('Please login to continue.');
-            window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/';
-        }
         window.onload = function () {
             setTimeout(function () {
                 document.getElementsByClassName('round_name')[0].style.transitionDuration = '1s';
