@@ -366,3 +366,31 @@ div.loader {
     left: 0;
     top: 12vh;
 }
+
+.instructions {
+    display: none;
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+    width: 80vw;
+    height: 70vh;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid white;
+}
+
+#close_btn {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+    cursor: pointer;
+}
+
+.heading {
+    margin-top: 1vh;
+    text-align: center;
+    font-size: 3vw;
+    color: white;
+    text-shadow: 0 0 5px #f44336, 0 0 10px #f44336, 0 0 20px #d50000, 0 0 30px #d50000, 0 0 40px #d50000, 0 0 55px #d50000, 0 0 75px #d50000;   
+}
