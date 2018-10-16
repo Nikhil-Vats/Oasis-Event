@@ -15,14 +15,110 @@
         <div class="round_name">Make your squads!</div>
         <div id="instructions_btn"><img onclick="toggleInstructions()" src="./images/instructions.svg"/></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
     </div>
-    <div class="container">
+    <div class="container" style="overflow-y: auto;">
         <form>
             <div class="nameDiv grp">
-                <label for="others">Hey there, please enter your gamer name:</label><br>
-                <input type="text" name="Name" value="" id="name_input" class="" required>
+                <label for="Name" class="labels">Hey there, please enter your gamer name:</label>
+                <input type="text" name="Name" value="" placeholder="ex: DragonConquerer" id="name_input" class="" required autofocus>
             </div>
+            <div class="ques1 grp">
+                    <label for="Ques1" class="labels">
+                        Which of these places is most likely visited by your counter culture following friends?
+                    </label>
+                    <div class="options">
+                        <label class="radio">
+                                <input type="radio" class="Options1" id="q1a1" value="1" name="optradio1">C'not
+                        </label>
+                        <label class="radio">
+                            <input type="radio" class="Options1" id= "q1a2" value="2" name="optradio1">Library's backyard
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options1" id= "q1a3" value="3" name="optradio1">Classes
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options1" id= "q1a4" value="4" name="optradio1">NAB at night
+                        </label>
+                    </div>
+            </div>
+            <div class="ques2 grp">
+                    <label for="Ques2" class="labels">
+                        Which of these places is most likely visited by your counter culture following friends?
+                    </label>
+                    <div class="options">
+                        <label class="radio">
+                                <input type="radio" class="Options2" id="q2a1" value="1" name="optradio2">C'not
+                        </label>
+                        <label class="radio">
+                            <input type="radio" class="Options2" id= "q2a2" value="2" name="optradio2">Library's backyard
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options2" id= "q2a3" value="3" name="optradio2">Classes
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options2" id= "q2a4" value="4" name="optradio2">NAB at night
+                        </label>
+                    </div>
+            </div>
+            <div class="ques3 grp">
+                    <label for="Ques3" class="labels">
+                        Which of these places is most likely visited by your counter culture following friends?
+                    </label>
+                    <div class="options">
+                        <label class="radio">
+                                <input type="radio" class="Options3" id="q3a1" value="1" name="optradio3">C'not
+                        </label>
+                        <label class="radio">
+                            <input type="radio" class="Options3" id= "q3a2" value="2" name="optradio3">Library's backyard
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options3" id= "q3a3" value="3" name="optradio3">Classes
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options3" id= "q3a4" value="4" name="optradio3">NAB at night
+                        </label>
+                    </div>
+            </div>
+            <div class="ques4 grp">
+                    <label for="Ques4" class="labels">
+                        Which of these places is most likely visited by your counter culture following friends?
+                    </label>
+                    <div class="options">
+                        <label class="radio">
+                                <input type="radio" class="Options4" id="q4a1" value="1" name="optradio4">C'not
+                        </label>
+                        <label class="radio">
+                            <input type="radio" class="Options4" id= "q4a2" value="2" name="optradio4">Library's backyard
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options4" id= "q4a3" value="3" name="optradio4">Classes
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options4" id= "q4a4" value="4" name="optradio4">NAB at night
+                        </label>
+                    </div>
+            </div>
+            <div class="ques5 grp">
+                    <label for="Ques5" class="labels">
+                        Which of these places is most likely visited by your counter culture following friends?
+                    </label>
+                    <div class="options">
+                        <label class="radio">
+                                <input type="radio" class="Options5" id="q5a1" value="1" name="optradio5">C'not
+                        </label>
+                        <label class="radio">
+                            <input type="radio" class="Options5" id= "q5a2" value="2" name="optradio5">Library's backyard
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options5" id= "q5a3" value="3" name="optradio5">Classes
+                        </label>
+                        <label class="radio">
+                                <input type="radio" class="Options5" id= "q5a4" value="4" name="optradio5">NAB at night
+                        </label>
+                    </div>
+            </div>
+
         </form>
-        <button type="submit" class="" onclick="submitEvent()" id="submit_btn">Submit</button>
+        <a type="submit" class="" onclick="submitEvent()" id="submit_btn">Submit</a>
     </div>        
     <div class="instructions">
         <img id="close_btn" onclick="toggleInstructions()" src="./images/close.svg">

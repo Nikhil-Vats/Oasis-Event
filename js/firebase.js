@@ -16,7 +16,6 @@ firebase.auth().useDeviceLanguage();
 
 function signIn () {
 firebase.auth().signInWithRedirect(provider);
-alert(4);
 firebase.auth().getRedirectResult().then(function(result) {
     if (result.credential) {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -25,12 +24,8 @@ firebase.auth().getRedirectResult().then(function(result) {
     }
     // The signed-in user info.
     var user = result.user;
-    alert(user);
-    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
-    alert(1);
   }).catch(function(error) {
     // Handle Errors here.
-    alert(7);
     var errorCode = error.code;
     var errorMessage = error.message;
     // The email of the user's account used.
@@ -46,8 +41,9 @@ const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
 
 function submitEvent() {
+    var id;
     var name = document.getElementById('name_input').value;
-    db.collection("users").doc().set({
+    db.collection("users").doc(name).set({
         name: name,
         is_allotted: false,
         score: 0,
@@ -58,6 +54,26 @@ function submitEvent() {
     .catch(function(error) {
         console.error("Error writing document: ", error);
     });
+    for(var i=1;i<=5;i++) {
+        var answer;
+        var options = document.getElementsByClassName('Options'+[i]);
+        console.log(options);
+        for(var j=0;j<=3;j++) {
+            alert(options[j]);
+            if(options[j].checked) {
+                answer = options[j].value;   
+                alert(answer);         
+            }
+        }
+        db.collection("users").doc(name).collection("teamQues").doc(i.toString()).set({
+            answer: answer,
+        }).then(function() {
+            console.log("Document successfully written!");
+        })
+        .catch(function(error) {
+            console.error("Error writing document: ", error);
+        });;
+    }    
 }
 
 app_fireBase = firebase;
