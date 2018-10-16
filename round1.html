@@ -27,14 +27,17 @@
                 document.getElementsByClassName('round_name')[0].style.color = '#4dd0e1';
             },1000);
         }    
-
+        var show = 0;
         function toggleInstructions() {
             instrucDiv = document.getElementsByClassName('instructions')[0];
-            if(instrucDiv.style.display == 'block') {
-                instrucDiv.style.display = 'none';
+            if(!show) {
+                instrucDiv.style.transform = 'scale(1)';
+                show = 1;
             }
-            else 
-                instrucDiv.style.display = 'block';
+            else {
+                instrucDiv.style.transform = 'scale(0)';
+                show = 0;
+            }    
         }
     </script>
 </body>

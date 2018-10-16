@@ -368,7 +368,7 @@ div.loader {
 }
 
 .instructions {
-    display: none;
+    display: block;
     position: absolute;
     top: 15vh;
     left: 10vw;
@@ -376,6 +376,8 @@ div.loader {
     height: 70vh;
     background: rgba(0, 0, 0, 0.7);
     border: 1px solid white;
+    transition: 0.5s ease-in-out;
+    transform: scale(0);
 }
 
 #close_btn {
