@@ -1,5 +1,5 @@
 
-// function makeTeams() {
+function makeTeams() {
     var groupA = []; 
     var groupB = [];
     var groupC = [];
@@ -46,4 +46,4 @@
     console.log(groupB);
     console.log(groupC);
     console.log(groupD); },4000);
-// }
+}

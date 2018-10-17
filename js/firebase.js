@@ -29,6 +29,28 @@ var db = firebase.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
 
+
+function statistics() {
+    document.getElementById('pacman').style.display = 'none';
+    var score = document.getElementById('Score').innerHTML;
+    document.getElementById('c_score').innerHTML = score;
+    document.getElementById('stats').style.transform = 'scale(1)';
+    sendScore(score);
+}
+
+function sendScore(score) {
+    db.collection("users").doc("Nikhil").set({
+        chapter_score: Number(score),
+    }, {merge: true})
+    .then(function() {
+        alert("done");
+        console.log("Document successfully written!");
+    })
+    .catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
+}
+
 function submitEvent() {
     var id;
     var name = document.getElementById('name_input').value;
