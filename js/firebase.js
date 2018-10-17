@@ -10,36 +10,7 @@ var config = {
   };
 
 firebase.initializeApp(config);
-var provider = new firebase.auth.GoogleAuthProvider();
-firebase.auth().languageCode = 'pt';
-firebase.auth().useDeviceLanguage();
-var name;
-function signIn () {
-firebase.auth().signInWithRedirect(provider);
-firebase.auth().getRedirectResult().then(function(result) {
-    if (result.credential) {
-      // This gives you a Google Access Token. You can use it to access the Google API.
-      var token = result.credential.accessToken;
-      // ...
-    }
-    // The signed-in user info.
-    var user = result.user;
-    console.log(user);
-    name = user.name;
-    console.log(name);
-    submitUser();
-    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
-  }).catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-  });
-}  
+
 function submitUser() {
     db.collection("users").doc(name).set({
     name: name,
@@ -72,6 +43,7 @@ function submitEvent() {
     .catch(function(error) {
         console.error("Error writing document: ", error);
     });
+    var groupName = "";
     for(var i=1;i<=5;i++) {
         var answer;
         var options = document.getElementsByClassName('Options'+[i]);
@@ -83,15 +55,19 @@ function submitEvent() {
                 // alert(answer);         
             }
         }
-        db.collection("users").doc(name).collection("teamQues").doc(i.toString()).set({
-            answer: answer,
-        }).then(function() {
-            console.log("Document successfully written!");
-        })
-        .catch(function(error) {
-            console.error("Error writing document: ", error);
-        });;
-    }    
+        groupName = groupName + answer;
+    }
+    alert(groupName);
+    db.collection("users").doc(name).set({
+        name: name,
+        score: 50,
+        group: groupName,
+    }, { merge: true }).then(function() {
+        console.log("Document successfully written!");
+    })
+    .catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
 }
 
 app_fireBase = firebase;
