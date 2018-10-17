@@ -64,7 +64,7 @@ function submitEvent() {
     db.collection("users").doc(name).set({
         name: name,
         is_allotted: false,
-        score: 0,
+        score: 50,
     })
     .then(function() {
         console.log("Document successfully written!");
@@ -75,12 +75,12 @@ function submitEvent() {
     for(var i=1;i<=5;i++) {
         var answer;
         var options = document.getElementsByClassName('Options'+[i]);
-        console.log(options);
+        // console.log(options);
         for(var j=0;j<=3;j++) {
-            alert(options[j]);
+            // alert(options[j]);
             if(options[j].checked) {
                 answer = options[j].value;   
-                alert(answer);         
+                // alert(answer);         
             }
         }
         db.collection("users").doc(name).collection("teamQues").doc(i.toString()).set({

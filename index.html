@@ -8,6 +8,9 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" />
     <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="898457728063-169batka0jlgm5pee6b9jmljjbr5o3is.apps.googleusercontent.com">
+
 </head>
 <body>
     <canvas id="canvas"></canvas>
@@ -20,7 +23,8 @@
             <div id="event_by"><span> | </span>A Coding Club Event</div>
             </div>
         </div>
-        <div id="play_btn"><a onclick="signIn()"> >> Get to the play zone!</a></div>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <!-- <div id="play_btn"class="g-signin2" data-onsuccess="onSignIn"><a> >> Get to the play zone!</a></div> -->
         <div id="club"><img src="images/club.svg"></div>
         <!-- <iframe src="https://cross-origin.com/myvideo.html" style="display:none;" allow="autoplay">
         <audio id="my_audio" src="SG.mp3" type="audio/mpeg"></audio>
@@ -32,5 +36,59 @@
     <script src="./js/firebase.js" type="text/javascript"></script>
     <script src="./js/auth.js" type="text/javascript"></script>
     <script src="./js/script.js" type="text/javascript"></script>
+    <script>
+   
+
+        function onSignIn(googleUser) {
+            console.log('Google Auth Response', googleUser);
+            // We need to register an Observer on Firebase Auth to make sure auth is initialized.
+            var unsubscribe = firebase.auth().onAuthStateChanged(function(firebaseUser) {
+            unsubscribe();
+            // Check if we are already signed-in Firebase with the correct user.
+            if (!isUserEqual(googleUser, firebaseUser)) {
+            // Build Firebase credential with the Google ID token.
+            var credential = firebase.auth.GoogleAuthProvider.credential(
+                googleUser.getAuthResponse().id_token);
+            // Sign in with credential from the Google user.
+            firebase.auth().signInAndRetrieveDataWithCredential(credential).catch(function(error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // The email of the user's account used.
+                var email = error.email;
+                // The firebase.auth.AuthCredential type that was used.
+                var credential = error.credential;
+                // ...
+            });
+            } else {
+            console.log('User already signed-in Firebase.');
+            }
+                function isUserEqual(googleUser, firebaseUser) {
+            if (firebaseUser) {
+                var providerData = firebaseUser.providerData;
+                for (var i = 0; i < providerData.length; i++) {
+                if (providerData[i].providerId === firebase.auth.GoogleAuthProvider.PROVIDER_ID &&
+                    providerData[i].uid === googleUser.getBasicProfile().getId()) {
+                    // We don't need to reauth the Firebase connection.
+                    return true;
+                }
+                }
+            }
+            return false;
+            }
+            });
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        }
+        function signOut() {
+            var auth2 = gapi.auth2.getAuthInstance();
+            auth2.signOut().then(function () {
+                console.log('User signed out.');
+            });
+        }
+    </script>
 </body>
 </html>
