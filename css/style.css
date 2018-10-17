@@ -335,6 +335,9 @@ div.loader {
     align-items: center;
     width: 100vw;
     height: 12vh;
+    box-sizing: border-box;
+    /* border-bottom: 1px solid #4dd0e1; */
+    box-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
 }
 
 #fest_icon img {
@@ -351,6 +354,22 @@ div.loader {
     font-size: 3vw;
     color: white;
     text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
+}
+
+.score1 {
+    color: white;
+    position: absolute;
+    right : 25vw;
+}
+
+.score2 {
+    color: white;
+    position: absolute;
+    right : 10vw;
+}
+
+#y_score, #t_score {
+    box-shadow: 2px salmon;
 }
 
 #instructions_btn img {
@@ -431,18 +450,28 @@ div.loader {
     margin: 6vh 10vw;
     padding: 1vh 2vh 3vh; 
     width: 80vw;
+    color: white;
     border-bottom: 1px solid whitesmoke;
+    transition: 0.3s ease-in-out;
+}
+
+.grp:hover {
+    background-color: #000019;
+    color: white;
+    box-shadow: 0 0 5px #4caf50, 0 0 6px #4caf50, 0 0 7px #4caf50, 0 0 8px #4caf50, 0 0 9px #4caf50, 0 0 10px #4caf50, 0 0 12px #4caf50;
 }
 
 form > :nth-child(even) {
-    background-color: #304ffe;
-    box-shadow: 0 0 5px #304ffe, 0 0 6px #304ffe, 0 0 7px #304ffe, 0 0 8px #304ffe, 0 0 9px #304ffe, 0 0 10px #304ffe, 0 0 12px #304ffe;
+    background-color: #000019;
+    color: white;
+    box-shadow: 0 0 5px #4dd0e1, 0 0 6px #4dd0e1, 0 0 7px #4dd0e1, 0 0 8px #4dd0e1, 0 0 9px #4dd0e1, 0 0 10px #4dd0e1, 0 0 12px #4dd0e1;
 
 }
 
 form > :nth-child(odd) {
-    background-color: #1a237e;
-    box-shadow: 0 0 5px #1a237e, 0 0 6px #1a237e, 0 0 7px #1a237e, 0 0 8px #1a237e, 0 0 9px #1a237e, 0 0 10px #1a237e, 0 0 12px #1a237e;
+    background-color: #000019;
+    color: white;
+    box-shadow: 0 0 5px #3f51b5, 0 0 6px #3f51b5, 0 0 7px #3f51b5, 0 0 8px #3f51b5, 0 0 9px #3f51b5, 0 0 10px #3f51b5, 0 0 12px #3f51b5;
 
 }
 
@@ -451,9 +480,13 @@ form > :first-child {
     box-shadow: none;
 }
 
+form > :first-child:hover {
+    background-color: transparent;
+    box-shadow: none;
+}
+
 .labels {
     font-size: 2vw;
-    color: whitesmoke;
     padding-right: 5vw;
 }
     
@@ -481,7 +514,6 @@ form > :first-child {
 .radio {
     float: left;
     width: 40%;
-    color: white;
     font-size: 1.5vw;
     position: relative;
 }
