@@ -360,16 +360,40 @@ div.loader {
     color: white;
     position: absolute;
     right : 25vw;
+    text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
+}
+
+.fetching {
+    top: 30vh;
+    left: 30vw;
+    width: 40vw;
+    height: 40vh;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+    transform: scale(1);
 }
 
 .score2 {
     color: white;
     position: absolute;
     right : 10vw;
+    text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
 }
 
 #y_score, #t_score {
-    box-shadow: 2px salmon;
+    margin-left: 1vw;
+    padding: 4px;
+    border: 1px solid white;
+    background-color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 25px white, 0 0 15px white;
 }
 
 #instructions_btn img {

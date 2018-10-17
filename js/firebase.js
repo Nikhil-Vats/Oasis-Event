@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().languageCode = 'pt';
 firebase.auth().useDeviceLanguage();
-
+var name;
 function signIn () {
 firebase.auth().signInWithRedirect(provider);
 firebase.auth().getRedirectResult().then(function(result) {
@@ -24,6 +24,11 @@ firebase.auth().getRedirectResult().then(function(result) {
     }
     // The signed-in user info.
     var user = result.user;
+    console.log(user);
+    name = user.name;
+    console.log(name);
+    submitUser();
+    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
   }).catch(function(error) {
     // Handle Errors here.
     var errorCode = error.code;
@@ -35,7 +40,20 @@ firebase.auth().getRedirectResult().then(function(result) {
     // ...
   });
 }  
-  
+function submitUser() {
+    db.collection("users").doc(name).set({
+    name: name,
+    is_allotted: false,
+    score: 50,
+    })
+    .then(function() {
+        console.log("Document successfully written!");
+    })
+    .catch(function(error) {
+        console.error("Error writing document: ", error);
+    });
+}
+
 var db = firebase.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
