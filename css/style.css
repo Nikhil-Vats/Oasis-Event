@@ -384,7 +384,7 @@ div.loader {
 .score2 {
     color: white;
     position: absolute;
-    right : 10vw;
+    right : 13vw;
     text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
 }
 
@@ -517,7 +517,10 @@ form > :first-child:hover {
     padding-right: 5vw;
 }
     
-.nameDiv input {
+.nameDiv p {
+    font-size: 2vw;
+}
+/* .nameDiv input {
     font-family: 'Raleway', sans-serif;
     padding-left: 1vw;
     height: 7vh;
@@ -529,7 +532,7 @@ form > :first-child:hover {
 .nameDiv input:focus {
     border: 1px solid #4dd0e1;
     box-shadow: 0 0 5px #4dd0e1, 0 0 6px #4dd0e1, 0 0 7px #4dd0e1, 0 0 8px #4dd0e1, 0 0 9px #4dd0e1, 0 0 10px #4dd0e1, 0 0 12px #4dd0e1;
-}
+} */
 
 .options {
     display: flex;
@@ -614,7 +617,7 @@ form > :first-child:hover {
     font-size: 2vw;
     position: relative;
     color: white;
-    transform: scale(0.4);
+    transform: scale(0);
     transition: 0.3s ease-in-out;
     z-index: 60;
     padding: 2vh;

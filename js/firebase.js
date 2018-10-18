@@ -11,19 +11,19 @@ var config = {
 
 firebase.initializeApp(config);
 
-function submitUser() {
-    db.collection("users").doc(name).set({
-    name: name,
-    is_allotted: false,
-    score: 50,
-    })
-    .then(function() {
-        console.log("Document successfully written!");
-    })
-    .catch(function(error) {
-        console.error("Error writing document: ", error);
-    });
-}
+// function submitUser() {
+//     db.collection("users").doc(name).set({
+//     name: name,
+//     is_allotted: false,
+//     score: 50,
+//     })
+//     .then(function() {
+//         console.log("Document successfully written!");
+//     })
+//     .catch(function(error) {
+//         console.error("Error writing document: ", error);
+//     });
+// }
 
 var db = firebase.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
@@ -53,9 +53,8 @@ function sendScore(score) {
 
 function submitEvent() {
     var id;
-    var name = document.getElementById('name_input').value;
+    var name = document.getElementById('name_space').innerHTML;
     db.collection("users").doc(name).set({
-        name: name,
         is_allotted: false,
         score: 50,
     })
