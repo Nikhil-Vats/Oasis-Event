@@ -2,7 +2,7 @@ var app_fireBase = {};
 
 var config = {
     apiKey: "AIzaSyDz7s1lXGSVhAEj8TIQSsEjeatPO5h9e2c",
-    authDomain: "https://nikhilphalange.github.io/Oasis-Event/round1.html",
+    authDomain: "oasis-event.firebaseapp.com",
     databaseURL: "https://oasis-event.firebaseio.com",
     projectId: "oasis-event",
     storageBucket: "oasis-event.appspot.com",

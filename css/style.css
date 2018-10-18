@@ -378,7 +378,7 @@ div.loader {
     align-items: center;
     font-size: 30px;
     transition: 0.3s ease-in-out;
-    transform: scale(1);
+    transform: scale(0);
 }
 
 .score2 {
@@ -623,6 +623,11 @@ form > :first-child:hover {
     padding: 2vh;
 }
 
+@media only screen and (max-width: 800px) {
+    body {
+        display: none;
+    }
+}
 
 
   

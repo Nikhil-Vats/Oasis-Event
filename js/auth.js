@@ -7,10 +7,8 @@ function signIn() {
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithRedirect(provider);
 firebase.auth().onAuthStateChanged(function(user) {
-  // alert('Hi this is in onAuthStateChanged');
-  // redirect();
+  
   if (user) {
-    // User is signed in.
     console.log(user);
     user1 = user;
     alert('Hi this is in if user');
