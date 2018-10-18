@@ -10,6 +10,8 @@ firebase.auth().signInWithRedirect(provider);
 }
 
 firebase.auth().onAuthStateChanged(function(user) {
+  alert('Hi this is in onAuthStateChanged');
+  redirect();
   if (user) {
     // User is signed in.
     console.log(user);
