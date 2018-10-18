@@ -623,9 +623,22 @@ form > :first-child:hover {
     padding: 2vh;
 }
 
+#mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 800px) {
-    body {
-        display: none;
+    #mobile {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.98);
+        color: white;
+        font-size: 2vw;
+        z-index: 300;
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        width: 100vw;
     }
 }
 
