@@ -39,22 +39,22 @@ firebase.auth().signInWithRedirect(provider);
 
 firebase.auth().getRedirectResult().then(function (result) {
   var user = firebase.auth().currentUser;
-  name = "no name";
-  redirect();
-  if (user != null) {
-    alert('Hi this is in if user != null');
-    redirect();
-    user.providerData.forEach(function (profile) {
-      name = profile.displayName;
-      alert('Hi this is in in if user != null');
-      redirect();
-      console.log("Sign-in provider: " + profile.providerId);
-      console.log("  Provider-specific UID: " + profile.uid);
-      console.log("  Name: " + profile.displayName);
-      console.log("  Email: " + profile.email);
-      console.log("  Photo URL: " + profile.photoURL);
-    });
-  }
+  // name = "no name";
+  // redirect();
+  // if (user != null) {
+  //   // alert('Hi this is in if user != null');
+  //   redirect();
+  //   user.providerData.forEach(function (profile) {
+  //     name = profile.displayName;
+  //     // alert('Hi this is in in if user != null');
+  //     redirect();
+  //     console.log("Sign-in provider: " + profile.providerId);
+  //     console.log("  Provider-specific UID: " + profile.uid);
+  //     console.log("  Name: " + profile.displayName);
+  //     console.log("  Email: " + profile.email);
+  //     console.log("  Photo URL: " + profile.photoURL);
+  //   });
+  // }
   // This gives you a Google Access Token. You can use it to access the Google API.
   if (result.credential) {
       var token = result.credential.accessToken;
@@ -63,6 +63,7 @@ firebase.auth().getRedirectResult().then(function (result) {
   // The signed-in user info.
   var user2 = result.user;
   console.log('user ' + user2);
+  redirect();
   // if success redirect to
   $state.go('maps-fullwidth');
 
