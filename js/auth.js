@@ -6,12 +6,9 @@ function signIn() {
 
 var provider = new firebase.auth.GoogleAuthProvider();
 firebase.auth().signInWithRedirect(provider);
-
-}
-
 firebase.auth().onAuthStateChanged(function(user) {
-  alert('Hi this is in onAuthStateChanged');
-  redirect();
+  // alert('Hi this is in onAuthStateChanged');
+  // redirect();
   if (user) {
     // User is signed in.
     console.log(user);
@@ -39,6 +36,8 @@ user.providerData.forEach(function (profile) {
   console.log("  Photo URL: " + profile.photoURL);
 });
 }
+}
+
 
 // firebase.auth().getRedirectResult().then(function (result) {
 //   var user = firebase.auth().currentUser;
