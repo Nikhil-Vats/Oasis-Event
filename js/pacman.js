@@ -303,7 +303,7 @@ Pacman.User = function (game, map) {
     function loseLife() { 
         lives -= 1;
         Pacman = {};
-        statistics();
+        // statistics();
     };
 
     function getLives() {

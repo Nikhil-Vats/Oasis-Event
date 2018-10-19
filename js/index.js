@@ -155,7 +155,7 @@ App = function () {
       var width = sum ? state.correct / sum * 100 : 50;
       tools.style(ui.correctScale, {
         width: width + '%' });
-
+      // document.getElementById('c_score').innerHTML = state.score;
       ui.correctNumber.innerText = state.correct;
       ui.incorrectNumber.innerText = state.incorrect;
     } }, { key: 'calculateComparingPercent', value: function calculateComparingPercent()

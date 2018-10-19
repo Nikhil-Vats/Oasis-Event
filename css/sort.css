@@ -332,7 +332,7 @@ main {
   display: flex;
   margin: auto 0;
   z-index: 100;
-  background: #1e1e1e;
+  background: #000019;
   font-family: 'Raleway', sans-serif;
   transition: all 0.3s ease;
   overflow-y: auto;
@@ -432,7 +432,7 @@ main {
 
 .start-timer {
   color: white;
-  background: #1e1e1e;
+  background: #000019;
   z-index: 20;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   opacity: 0;
