@@ -562,7 +562,7 @@ Pacman.Map = function (size) {
         ctx.strokeStyle = "#0000FF";
         ctx.lineWidth   = 5;
         ctx.lineCap     = "round";
-        if(Pacman.WALLS.length) {
+        if(Pacman.WALLS) {
         for (i = 0; i < Pacman.WALLS.length; i += 1) {
             line = Pacman.WALLS[i];
             ctx.beginPath();
@@ -584,7 +584,10 @@ Pacman.Map = function (size) {
             }
             ctx.stroke();
         }
-    }    
+        }
+        else {
+            statistics();
+        }  
     }
     
     function reset() {       

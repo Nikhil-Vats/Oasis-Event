@@ -33,7 +33,10 @@ function statistics() {
     var score = document.getElementById('Score').innerHTML;
     document.getElementById('game-over-score').innerHTML = score;
     document.getElementById('stats').style.transform = 'scale(1)';
-    sendScore(score);
+}
+
+function showResult() {
+    document.getElementById('stats').style.transform = 'scale(1)';
 }
 
 function sendScore(score) {

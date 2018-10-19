@@ -30,9 +30,9 @@
     </div>
     <div id="wrapper">
 
-    <div class="top_nav">
+    <div class="top_nav" style="background: transparent;">
         <div id="fest_icon"><img id="fest_img" src="images/favicon.png" onclick="showSidenav()"></div>
-        <div class="round_name">Chapter 1: Bit about BITS!</div>
+        <div class="round_name" id="ch1">Chapter 1: Bit about BITS!</div>
         <div class="score2">Your Score: <span id="y_score">-</span></div>
         <!-- <div class="score2">Team Score: <span id="t_score">-</span></div> -->
         <div id="instructions_btn"><img onclick="toggleInstructions()" src="./images/instructions.svg"/></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
@@ -40,7 +40,7 @@
     <div class="fetching">
         <p>Hang in there, we are fetching data....</p>
     </div>
-    <div class="container" style="overflow-y: auto;">
+    <div class="container" style="overflow-y: auto;background: transparent; z-index: 30;">
        
         <form>
             <div class="nameDiv grp">
@@ -231,17 +231,21 @@
             if(document.readyState === "complete") {
             
                 // alert(2);
-                document.getElementById('loading').style.opacity = '0';
+                document.getElementById('loading').style.opacity = '1';
                 document.getElementById('loading').style.transition = '0.3s ease-in-out';
-                document.getElementById('loading').style.display = 'none';
+                document.getElementById('prism-logo').style.display = 'none';
+                document.getElementsByClassName('loader-line-mask')[0].style.display = 'none';
+                document.getElementsByClassName('loader-circle')[0].style.display = 'none';
                 document.getElementById('wrapper').style.opacity = '1';
                 document.getElementById('wrapper').style.display = 'block';
             }
             else {
                 window.onload = function () {
-                document.getElementById('loading').style.opacity = '0';
+                document.getElementById('loading').style.opacity = '1';
                 document.getElementById('loading').style.transition = '0.3s ease-in-out';
-                document.getElementById('loading').style.display = 'none';
+                document.getElementById('prism-logo').style.display = 'none';
+                document.getElementsByClassName('loader-circle')[0].style.display = 'none';
+                document.getElementsByClassName('loader-line-mask')[0].style.display = 'none';
                 document.getElementById('wrapper').style.opacity = '1';
                 document.getElementById('wrapper').style.display = 'block';
                 }
@@ -249,9 +253,11 @@
         }
         function hideLoader() {
             // alert(2);
-            document.getElementById('loading').style.opacity = '0';
+            document.getElementById('loading').style.opacity = '1';
             document.getElementById('loading').style.transition = '0.3s ease-in-out';
-            document.getElementById('loading').style.display = 'none';
+            document.getElementById('prism-logo').style.display = 'none';
+            document.getElementsByClassName('loader-circle')[0].style.display = 'none';
+            document.getElementsByClassName('loader-line-mask')[0].style.display = 'none';
             document.getElementById('wrapper').style.opacity = '1';
             document.getElementById('wrapper').style.display = 'block';
         }

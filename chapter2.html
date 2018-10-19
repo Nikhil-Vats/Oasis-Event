@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="loading">
-        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-background" style="background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);" class="vertical-centered-box"></div>
         <div id="particles-foreground" class="vertical-centered-box"></div>
         
         <div class="vertical-centered-box">
@@ -29,22 +29,22 @@
         <img src="./images/rotate.svg">
     </div>
     <div id="wrapper">
-    <div class="top_nav">
+    <div class="top_nav" style="background: transparent;">
         <div id="fest_icon"><img id="fest_img" src="images/favicon.png" onclick="showSidenav()"></div>
-        <div class="round_name">Chapter 2: A ride to past!</div>
-        <div class="score2">Your Score: <span id="y_score">-</span></div>
+        <div class="round_name" id="ch2">Chapter 2: A ride to past!</div>
+        <div class="score2">Your Score: <span id="y_score">0</span></div>
         <!-- <div class="score2">Team Score: <span id="t_score">-</span></div> -->
         <div id="instructions_btn"><img onclick="toggleInstructions()" src="./images/instructions.svg"/></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
     </div>
-    <div class="fetching">
+    <div class="fetching" style="display: none;">
             <p>Hang in there, we are fetching data....</p>
     </div>
-    <div class="container">
+    <div class="container" style="background: transparent;z-index: 30">
         <div id="pacman"></div>
         <div id="stats">
             <p>Your score for this chapter is: <span id="game-over-score"></span></p>
-            <p>Please wait while we save your score and add it to your team's score!</p>
-            <a id="chapter-button" onclick="nextChapter(3)">Next Chapter</a>
+            <!-- <p>Please wait while we save your score.</p> -->
+            <a id="chapter-button" onclick="nextChapter()">Next Chapter</a>
         </div>
         <div id="Score"></div> 
     </div>
@@ -135,17 +135,17 @@
             if(document.readyState === "complete") {
             
                 // alert(2);
-                document.getElementById('loading').style.opacity = '0';
+                document.getElementById('loading').style.opacity = '1';
                 document.getElementById('loading').style.transition = '0.3s ease-in-out';
-                document.getElementById('loading').style.display = 'none';
+                // document.getElementById('loading').style.display = 'none';
                 document.getElementById('wrapper').style.opacity = '1';
                 document.getElementById('wrapper').style.display = 'block';
             }
             else {
                 window.onload = function () {
-                document.getElementById('loading').style.opacity = '0';
+                document.getElementById('loading').style.opacity = '1';
                 document.getElementById('loading').style.transition = '0.3s ease-in-out';
-                document.getElementById('loading').style.display = 'none';
+                // document.getElementById('loading').style.display = 'none';
                 document.getElementById('wrapper').style.opacity = '1';
                 document.getElementById('wrapper').style.display = 'block';
                 }
@@ -153,13 +153,13 @@
         }
         function hideLoader() {
             // alert(2);
-            document.getElementById('loading').style.opacity = '0';
+            document.getElementById('loading').style.opacity = '1';
             document.getElementById('loading').style.transition = '0.3s ease-in-out';
-            document.getElementById('loading').style.display = 'none';
+            // document.getElementById('loading').style.display = 'none';
             document.getElementById('wrapper').style.opacity = '1';
             document.getElementById('wrapper').style.display = 'block';
         }
-        getScore();
+        // getScore();
     </script>
 </body>
 </html>        
