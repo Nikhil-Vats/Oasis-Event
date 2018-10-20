@@ -19,7 +19,7 @@ var _createClass = function () {function defineProperties(target, props) {for (v
 var config = {
   xVel: 0.05,
   yVel: 0.055,
-  score: [50, -250],
+  score: [200, -100],
   time: 30,
   defaultMode: 'shape',
   bonusRow: 10,
