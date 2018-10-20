@@ -1,7 +1,7 @@
 var user1, name;
-var y_score = document.getElementById('y_score');
-var loader = document.getElementsByClassName('fetching')[0];
-var name_space = document.getElementById('name_space');
+// var y_score = document.getElementById('y_score');
+// var loader = document.getElementsByClassName('fetching')[0];
+// var name_space = document.getElementById('name_space');
 function signIn() {
 
 var provider = new firebase.auth.GoogleAuthProvider();
@@ -12,21 +12,22 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log(user);
     user1 = user;
     alert('Hi this is in if user');
-    redirect();
+    // redirect();
   } else {
     // No user is signed in.
   }
 });
 
 var user = firebase.auth().currentUser;
-
+console.log(user);
+alert(user);
 if (user != null) {
 alert('Hi this is in if user != null');
-redirect();
+// redirect();
 user.providerData.forEach(function (profile) {
   name = profile.displayName;
   alert('Hi this is in in if user != null');
-  redirect();
+  // redirect();
   console.log("Sign-in provider: " + profile.providerId);
   console.log("  Provider-specific UID: " + profile.uid);
   console.log("  Name: " + profile.displayName);
