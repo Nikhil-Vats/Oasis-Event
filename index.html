@@ -11,8 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="898457728063-169batka0jlgm5pee6b9jmljjbr5o3is.apps.googleusercontent.com">
-
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/86/three.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/127738/perlin.js'></script>
 </head>
 <body>
     <div id="loading">
@@ -31,13 +31,9 @@
     </div>
     <div id="mainpage">
     <div id="background">
-        <!-- <img id="a" src="./images/guitar.jpg">
-        <img id="b" src="./images/guitar.jpg">
-        <img id="c" src="./images/guitar.jpg">
-        <img id="d" src="./images/guitar.jpg">
-        <img id="e" src="./images/guitar.jpg"> -->
+        <canvas id="waves"></canvas>
     </div>    
-    <canvas id="canvas"></canvas>
+    <!-- <canvas id="canvas"></canvas> -->
     <div id="homepage">
         <div id="fest"><img src="images/favicon.png"></div>
         <div id="heading" class="logo">
@@ -61,6 +57,7 @@
     <script src="./js/firebase.js" type="text/javascript"></script>
     <script src="./js/auth.js" type="text/javascript"></script>
     <script src="./js/loader.js" type="text/javascript"></script>
+    <script src="./js/waves.js" type="text/javascript"></script>
     <script>
         var loaded = false;
         window.onload = function () {

@@ -26,6 +26,13 @@ body {
     left: 0;
     top: 0;
 }
+#waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(1.5);
+    cursor: pointer;
+  }
 
 #a {
     position: absolute;
@@ -349,7 +356,7 @@ div.loader {
 }
 
 #descrip {
-    margin-top: 30vh;
+    margin-top: 34vh;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -361,6 +368,7 @@ div.loader {
     font-size: 3vw;
     font-family: 'Raleway', sans-serif;
     color: white;
+    font-weight: 500;
     padding-right: 10px;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4caf50, 0 0 30px #4caf50, 0 0 40px #4caf50, 0 0 55px #4caf50, 0 0 75px #4caf50;
     animation: fillIn1 1s 6.5s ease-in-out 1 forwards;
@@ -370,9 +378,10 @@ div.loader {
     font-size: 3vw;
     color: white;
     padding-left: 10px;
+    font-weight: 500;
     font-family: 'Raleway', sans-serif;
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
-    animation: fillIn2 1s 3.5s ease-in-out 1 forwards;
+    animation: fillIn2 1s 6.5s ease-in-out 1 forwards;
 }
 
 #event_by span {
