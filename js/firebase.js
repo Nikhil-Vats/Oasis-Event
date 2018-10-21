@@ -28,6 +28,26 @@ function getScore() {
     });
 }
 
+function checkStatus(i) {
+    var status = 0;
+    db.collection("users").doc("Nikhil_new")
+    .get()
+    .then(function(doc) {
+        status = doc.data().chapter_status;
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error);
+    });
+    if(i == status) {
+        document.getElementsByClassName('container')[0].style.display = 'block';
+    }
+    else {
+        document.getElementsByClassName('fetching')[0].style.display = 'none';
+        document.getElementsByClassName('container')[0].style.display = 'none' ;
+        document.getElementsByClassName('status')[0].style.display = 'block';
+    }
+}
+
 function statistics() {
     document.getElementById('pacman').style.display = 'none';
     var score = document.getElementById('Score').innerHTML;
