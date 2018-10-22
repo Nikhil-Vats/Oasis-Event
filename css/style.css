@@ -878,8 +878,8 @@ form > :first-child:hover {
 #sidenav_bg1 {
     position: absolute;
     top: -10vw;
-    left: -20vw;
-    width: 30vw;
+    left: -25vw;
+    width: 35vw;
     height: 130vh;
     background-color: black;
     display: table;

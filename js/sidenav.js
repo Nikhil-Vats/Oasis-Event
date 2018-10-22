@@ -20,7 +20,7 @@ function showSidenav() {
     sidenav_content.style.left = '0vw';
     sidenav_bg1.style.transform = 'rotate(20deg)';
     sidenav_bg2.style.transform = 'rotate(-20deg)';
-    sidenav_bg1.style.left = '-10vw';
+    sidenav_bg1.style.left = '-15vw';
     sidenav_content.style.transitionDelay = '0.4s';
     sidenav_content.style.transitionDuration = '0.3s';
     sidenav_bg1.style.zIndex = '2100';
@@ -44,7 +44,7 @@ function closeSidenav() {
     openButton.style.transitionDuration = '0.3s';
     openButton.style.display = 'block';
     
-    sidenav_content.style.left = '-20vw';
+    sidenav_content.style.left = '-25vw';
     sidenav_content.style.transitionDelay = '0s';
     sidenav_bg1.style.transform = 'rotateY(90deg)';
     sidenav_bg2.style.transform = 'rotateY(90deg)';
