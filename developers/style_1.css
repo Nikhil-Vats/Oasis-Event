@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Rakkas');
+@import url('https://fonts.googleapis.com/css?family=Charmonman');
+@import url('https://fonts.googleapis.com/css?family=Charmonman|Indie+Flower');
+html, body {
+  background: #333;
+}
+canvas{
+  position: absolute;
+  width: 100%; height: 150vh;
+  top: 0; right: 0; bottom: 0; left: 0;
+}
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+.logo{
+position: absolute;
+	height:10vh;
+	width:5vw;
+	top:3vh;
+	left:3vw;
+	z-index: 2;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.neon{
+  font-family: 'Rakkas', cursive;
+  font-size:80px;
+  color: #FFD5FF;
+  position: absolute;
+  top: 2vh;
+  left: 30vw;
+ 
+/*  transform: translate(-50%, -50%);*/
+  font-weight: 200;
+  letter-spacing: 8px;
+  text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
+}
+
+.flicker-slow{
+  animation: flicker 3s linear infinite;
+}
+
+.flicker-fast{
+  animation: flicker 1s linear infinite;
+}
+
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+		//text-shadow: none;
+    opacity: .99;
+		
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+}
+.header{
+	background-color: #404040;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+	height: 15vh;
+	width: 100vw;
+	
+
+}
+.dev_1{
+	position: absolute;
+	top:20vh;
+	left:2vw;
+	height:70vh;
+	width:30vw;
+	background-color: ;
+}
+.dev_2{
+	position: absolute;
+	top:20vh;
+	left:35vw;
+	height:70vh;
+	width:30vw;
+	background-color: ;
+}
+.dev_3{
+	position: absolute;
+	top:20vh;
+	left:67vw;
+	height:70vh;
+	width:30vw;
+	background-color: ;
+}
+.dev_4{
+	position: absolute;
+	top:70vh;
+	left:20vw;
+	height:70vh;
+	width:30vw;
+}
+
+.dev_5{
+	position: absolute;
+	top:70vh;
+	left:50vw;
+	height:70vh;
+	width:30vw;
+}
+
+
+
+
+.profile{
+	position: relative;
+
+    border: 1px solid rgb(236, 240, 241);
+	top:2vh;
+	left:6vw;
+	border-radius: 50%;
+	background-image: url('img.jpg') ;
+	height: 30vh;
+	width: 15vw;
+	object-fit: contain;
+	background-size:contain;
+
+
+}
+
+@keyframes turn-on{
+  0%{
+    transform:scale(1,0.8) translate3d(0,0,0);
+    -webkit-filter:brightness(30);
+    filter:brightness(30);
+    opacity:1;
+  }
+  3.5%{
+    transform:scale(1,0.8) translate3d(0,100%,0);
+  }
+  
+  3.6%{
+    transform:scale(1,0.8) translate3d(0,-100%,0);
+    opacity:1;
+  } 
+  
+  9%{
+    transform:scale(1.3,0.6) translate3d(0,100%,0);
+    -webkit-filter:brightness(30);
+    filter:brightness(30);
+    opacity:0;
+  }
+  
+  
+  
+  11%{
+    transform:scale(1,1) translate3d(0,0,0);
+    -webkit-filter:contrast(0) brightness(0) ;
+    filter:contrast(0) brightness(0);
+    opacity:0;
+  }
+  
+  100%{
+    transform:scale(1,1) translate3d(0,0,0);
+    -webkit-filter:contrast(1) brightness(1.2) saturate(1.3);
+    filter:contrast(1) brightness(1.2) saturate(1.3);
+    opacity:1;
+  }
+}
+.discription{
+	position: relative;
+	top:8vh;
+	left:4vw;
+	/*background-color:white;*/
+	height: 20vh;
+	width: 20vw;
+	background-color: #333;
+/*	clip-path: polygon(0 0, 100% 0%, 75% 100%, 25% 100%);*/
+
+}
+.name{
+position: relative;
+	color: #FFD5FF;
+	font-family: 'Charmonman' ,cursive;
+	font-size: 36px;
+	font-weight: 700;
+	left:3vw;
+	top:2vh
+	
+}
+
+.designation{
+	position: relative;
+	color: #FFD5FF;
+	font-family: 'Indie+Flower' ,cursive;
+	font-size: 20px;
+	left:3vw;
+	top:4vh;
+
+}
