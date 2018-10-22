@@ -597,13 +597,11 @@ div.loader {
     font-size: 2vw;
     text-align: center;
     color: white;
-    /* background-color: #000019; */
     height: 88vh;
     width: 100vw;
     position: absolute;
     left: 0;
     top: 12vh;
-    /* z-index: -110; */
     display: none;
 }
 
@@ -625,13 +623,14 @@ div.loader {
     left: 10vw;
     width: 80vw;
     height: 70vh;
-    background: rgba(0, 0, 0, 0.92);
+    background: rgba(0, 0, 0, 0.95);
     border: 1px solid white;
     transition: 0.5s ease-in-out;
     transform: scale(0);
     overflow-y: auto;
     padding: 0 10px;
     z-index: 110;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 25px white, 0 0 15px white;
 }
 
 #close_btn {
@@ -665,8 +664,9 @@ div.loader {
 }
 
 .bold {
-    color: #4caf50;
-    text-shadow: 0 0 1px #4caf50, 0 0 1px #4caf50, 0 0 1px #4caf50, 0 0 1px #4caf50, 0 0 1px #4caf50, 0 0 1px #4caf50, 0 0 1px #4caf50;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
 }
 
 .grp {
@@ -964,7 +964,7 @@ form > :first-child:hover {
     color: white;
     filter: opacity(0);
     display: block;
-    z-index: 410;
+    z-index: 2200;
 }
 
 #close_div, #close_div2 {
