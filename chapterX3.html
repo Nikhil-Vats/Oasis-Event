@@ -22,7 +22,7 @@
 
 <body>
     <div id="loading">
-        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-background" style="background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);" class="vertical-centered-box"></div>
         <div id="particles-foreground" class="vertical-centered-box"></div>
         
         <div class="vertical-centered-box">
@@ -47,6 +47,9 @@
     </div>
     <div class="fetching">
             <p>Hang in there, we are fetching data....</p>
+    </div>
+    <div class="status" id="launch-screen-title" style="background-color: #000019;">
+            Sorry you are not eligible for this round!
     </div>
   <svg style="display:none;">
 
@@ -125,7 +128,7 @@
 
   <main>
 
-    <div class="menu" id="menu">
+    <div class="menu" id="menu" style="display: none;">
         <div class="menu__content">
           <!-- <h1>Rapid Sorting Game</h1> -->
           <h2>How to play :</h2>
@@ -161,7 +164,7 @@
          </div>
          <p class="game-over__comparing">You scored higher than <span id="comparing-percent">0%</span> of people</p>
          <!-- <p id="your_score">Your score for this chapter is <span id="c_score">  </span></p> -->
-         <button class="button" type="button" onclick="nextChapter()">Next Chapter</button>
+         <button class="button" type="button" onclick="nextChapter(4)">Next Chapter</button>
          <!-- <button id="restart-button" class="button" type="button">Again</button> -->
        </div>
     </div>
@@ -326,6 +329,7 @@
             $("#loader1").attr("disabled", "disabled");
         }
         getScore();
+        checkStatus(3);
     </script>
     <script  src="js/index.js"></script>
 </body>

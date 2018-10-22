@@ -11,6 +11,16 @@ body {
     overflow: hidden;
 }
 
+#launch-screen-title {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 4em;
+    margin: 0 0 0.4em 0;
+    padding-top: 20vh;
+    font-weight: 500;
+}
+
 #loading {
     display: block;
     opacity: 1;
@@ -850,6 +860,12 @@ form > :first-child:hover {
         left: 0;
         width: 100vw;
     }
+}
+
+/* -------------------------------------------SHOOT ----------------------------------------- */
+
+#shoot {
+    display: none;
 }
 
 

@@ -30,22 +30,40 @@ function getScore() {
 
 function checkStatus(i) {
     var status = 0;
-    db.collection("users").doc("Nikhil_new")
+    db.collection("users").doc("Nikhil")
     .get()
     .then(function(doc) {
         status = doc.data().chapter_status;
+        if(i == status) {
+            if(document.getElementsByClassName('container')[0])
+            document.getElementsByClassName('container')[0].style.display = 'block';
+            else if(document.getElementById('menu'))
+            document.getElementById('menu').style.display = 'block';
+            else if(document.getElementById('app'))
+            document.getElementById('app').style.display = 'block';
+        }
+        else {
+            document.getElementsByClassName('fetching')[0].style.display = 'none';
+            if(document.getElementsByClassName('container')[0])
+            document.getElementsByClassName('container')[0].style.display = 'none' ;
+            else if(document.getElementById('menu'))
+            document.getElementById('menu').style.display = 'none';
+            else if(document.getElementById('app')) {
+            document.getElementById('launch-screen__title').innerHTML = 'Sorry you are not eligible for this round!';
+            document.getElementById('launch-screen__description').style.display = 'none';
+            document.getElementById('start-btn').style.display = 'none';
+            document.getElementById('status2').style.display = 'block';
+            }
+            if(i==4) {
+                document.getElementsByClassName('container')[0].style.display = 'block' ;
+                document.getElementById('canvas').style.display = 'none';
+            }
+            document.getElementsByClassName('status')[0].style.display = 'block';
+        }
     })
     .catch(function(error) {
         console.log("Error getting documents: ", error);
     });
-    if(i == status) {
-        document.getElementsByClassName('container')[0].style.display = 'block';
-    }
-    else {
-        document.getElementsByClassName('fetching')[0].style.display = 'none';
-        document.getElementsByClassName('container')[0].style.display = 'none' ;
-        document.getElementsByClassName('status')[0].style.display = 'block';
-    }
 }
 
 function statistics() {
@@ -176,33 +194,19 @@ function submitEvent() {
         else if (tapCold[i] == max[i]) {
             value = 3;
             if(answer == 3) {
-                // alert(`Value is ${value}`);
-                // alert(`For question ${i} answer is correct`);
                 score = score + 50;
-                // alert(`Added score 50 for ques ${i},${score}`);
-                // console.log(doc.data());
             }
             else {
                 score = score + 10;
-                // alert(`For question ${i} answer is false`);
-                // alert(`Added score 10 for ques ${i},${score}`);
-                // console.log(doc.data());
             }
         }
         else if (tapDold[i] == max[i]) {
             value = 4;
             if(answer == 4) {
-                // alert(`Value is ${value}`);
-                // alert(`For question ${i} answer is correct`);
                 score = score + 50;
-                // alert(`Added score 50 for ques ${i},${score}`);
-                // console.log(doc.data());
             }
             else {
                 score = score + 10;
-                // alert(`For question ${i} answer is false`);
-                // alert(`Added score 10 for ques ${i},${score}`);
-                // console.log(doc.data());
             }
         }
         console.log('Final score',score);
@@ -212,14 +216,17 @@ function submitEvent() {
         db.collection("users").doc("Nikhil").set({
             name: "Nikhil_new",
             score: score,
+            chapter_status: 2,
         }, { merge: true }).then(function() {
             console.log("Document successfully written!");
-            window.location.href = 'file:///C:/Users/Dell/Desktop/Oasis%20Event/chapter2.html';
+            var current_url = window.location.href;
+            var new_url = current_url.split("X")[0] + "X" + "2.html";
+            window.location.href = new_url;
         })
         .catch(function(error) {
             console.error("Error writing document: ", error);
         });
-    }    
+}    
 
 
 app_fireBase = firebase;
