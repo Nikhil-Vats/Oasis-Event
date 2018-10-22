@@ -325,16 +325,16 @@ app.end = function(win) {
     app.launchScreen(
       app.score.number,
       "Well done!",
-      "Your score is: " + sessionStorage.getItem("results") + ' The next level will be harder.',
+      "Your score is: " + sessionStorage.getItem("results")*10 + ' The next level will be harder.',
       "PLAY NEXT LEVEL"
     );
   } else {
     app.launchScreen(
       0,
       "Game over!",
-      "Your score for this chapter is: " + sessionStorage.getItem("results"),
+      "Your score for this chapter is: " + sessionStorage.getItem("results")*10,
     );
-    document.getElementById('game-over-score').innerHTML = sessionStorage.getItem("results");
+    document.getElementById('game-over-score').innerHTML = sessionStorage.getItem("results")*10;
     document.getElementById('start-btn').style.display = 'none';
     document.getElementById('chapter-button').style.display = 'block';
     app.results("reset");

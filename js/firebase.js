@@ -206,7 +206,7 @@ function submitEvent() {
                 score = score + 50;
             }
             else {
-                score = score + 10;
+                score = score + 20;
             }
         }
         console.log('Final score',score);

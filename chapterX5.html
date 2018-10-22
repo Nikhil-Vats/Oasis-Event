@@ -19,6 +19,10 @@
             background: transparent;
             z-index: 2100;
         }
+        #loading {
+            transition-duration: 0.1s;
+            transition-delay: 0s;
+        }
     </style>    
 </head>
 
@@ -63,7 +67,7 @@
                         <h1 id="launch-screen__title"></h1>
                         <p id="launch-screen__description"></p>
                         <button class="btn" id="start-btn">PLAY</button>
-                        <a id="chapter-button" style="display:none;min-width: 25vw;height: 1.9vh;"onclick="nextChapter(6)">Save your score and See your position!</a>
+                        <a id="chapter-button" style="display:none;min-width: 45vw;height: 2.7vh;"onclick="nextChapter(6)">Save your score and See your position!</a>
                         </div>
                     </div>
                 </div>
@@ -152,7 +156,7 @@
             else {
                 showOnload();
             }
-        }, 4000); 
+        }, 2000); 
         function showOnload() {
             if(document.readyState === "complete") {
                 document.getElementById('loading').style.display = 'none';

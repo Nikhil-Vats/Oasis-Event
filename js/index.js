@@ -19,8 +19,8 @@ var _createClass = function () {function defineProperties(target, props) {for (v
 var config = {
   xVel: 0.05,
   yVel: 0.055,
-  score: [200, -100],
-  time: 30,
+  score: [50, -25],
+  time: 45,
   defaultMode: 'shape',
   bonusRow: 10,
   particles: 20,

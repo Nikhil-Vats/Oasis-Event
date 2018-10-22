@@ -403,7 +403,7 @@ function game() {
             ctx.font = "20px 'Raleway', sans-serif";
             ctx.fillStyle = "white";
             ctx.textAlign = "center";
-            document.getElementById('game-over-score').innerHTML = destroyed*50;
+            document.getElementById('game-over-score').innerHTML = destroyed*30;
             // ctx.fillText("RECORD: "+ record, cW/2,cH/2 + 185);
 
             // ctx.drawImage(sprite, 500, 18, 70, 70, cW/2 - 35, cH/2 + 40, 70,70);
