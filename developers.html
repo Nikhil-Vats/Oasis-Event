@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Far Out Diaries: Developers</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png" sizes="64x64" />
+    <link href="css/loader.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="loading">
+        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-foreground" class="vertical-centered-box"></div>
+
+        <div class="vertical-centered-box">
+            <div class="content">
+            <div class="loader-circle"></div>
+            <div class="loader-line-mask">
+                <div class="loader-line"></div>
+            </div>
+            <img src="images/favicon.png" width="36" height="36" id="prism-logo">
+            </div>
+        </div>            
+    </div>
+    <div id="warning-message">
+        <img src="./images/rotate.svg">
+    </div>
+    <div id="wrapper">
+
+    <div class="top_nav" style="background: transparent;">
+        <div id="fest_icon"><img id="fest_img" src="images/favicon.png" onclick="showSidenav()"></div>
+        <div class="round_name" id="ch1">Developers</div>
+    </div>
+        <div class="container" style="overflow-y: auto;background: transparent; z-index: 30;">
+            <div id="developers">
+                <div class="developer">
+                    <img src="./images/nikhil.jpg" class="developer_img">
+                    <p class="developer_name" >Nikhil Vats</p>
+                    <p class="developer_work">Frontend | Backend</p>
+                </div>
+                <div class="developer">
+                    <img src="./images/keshav.jpg" class="developer_img">
+                    <p class="developer_name" >Keshav Sethi</p>
+                    <p class="developer_work">Frontend</p>
+                </div>
+                <div class="developer">
+                    <img src="./images/sparsh.jpg" class="developer_img">
+                    <p class="developer_name" >Sparsh Jain</p>
+                    <p class="developer_work">Frontend</p>
+                </div>
+                <div class="developer">
+                    <img src="./images/rahil.jpg" class="developer_img">
+                    <p class="developer_name" >Rahil Jain</p>
+                    <p class="developer_work">Graphics</p>
+                </div>
+                <div class="developer">
+                    <img src="./images/prabhu.jpg" class="developer_img">
+                    <p class="developer_name" >Prabhu</p>
+                    <p class="developer_work">Graphics</p>
+                </div>
+            </div>
+        </div>        
+        <div id="close" onclick="closeSidenav()">
+            <div id="close_div"></div>
+        </div> 
+        <div id="sidenav">
+        <div id="sidenav_bg1">
+        </div>
+        <div id="sidenav_content">
+            <ul id="list">
+                <a href="./chapter_1.html" class="link"><li style="color: #4dd0e1;
+                    text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;">Chapter 1</li></a>
+                <a href="./chapter_2.html" class="link"><li>Chapter 2</li></a>
+                <a href="./chapter_3.html" class="link"><li>Chapter 3</li></a>
+                <a href="./chapter_4.html" class="link"><li>Chapter 4</li></a>
+                <a href="./chapter_5.html" class="link"><li>Chapter 5</li></a>
+                <a href="./results.html" class="link"><li>Results</li></a>
+                <a href="./developers.html" class="link"><li style="color: #4dd0e1;
+                    text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;">Developers</li></a>
+            </ul>
+        </div>
+        <div id="sidenav_bg2">
+        </div>
+        </div>
+        </div>
+        <script src="./js/loader.js" type="text/javascript"></script>
+        <script src="./js/sidenav.js" type="text/javascript"></script>
+        <script>
+            var loaded = false;
+            window.onload = function () {
+                loaded = true;
+            }
+            var elapsed = true;
+            setTimeout(function () {
+                if(loaded && elapsed) {
+                    hideLoader();
+                }
+                else {
+                    showOnload();
+                }
+            }, 4000); 
+            function showOnload() {
+                // alert(4);
+                if(document.readyState === "complete") {
+                
+                    // alert(2);
+                    document.getElementById('loading').style.opacity = '1';
+                    document.getElementById('loading').style.transition = '0.3s ease-in-out';
+                    document.getElementById('prism-logo').style.display = 'none';
+                    document.getElementsByClassName('loader-line-mask')[0].style.display = 'none';
+                    document.getElementsByClassName('loader-circle')[0].style.display = 'none';
+                    document.getElementById('wrapper').style.opacity = '1';
+                    document.getElementById('wrapper').style.display = 'block';
+                }
+                else {
+                    window.onload = function () {
+                    document.getElementById('loading').style.opacity = '1';
+                    document.getElementById('loading').style.transition = '0.3s ease-in-out';
+                    document.getElementById('prism-logo').style.display = 'none';
+                    document.getElementsByClassName('loader-circle')[0].style.display = 'none';
+                    document.getElementsByClassName('loader-line-mask')[0].style.display = 'none';
+                    document.getElementById('wrapper').style.opacity = '1';
+                    document.getElementById('wrapper').style.display = 'block';
+                    }
+                }
+            }
+            function hideLoader() {
+                // alert(2);
+                document.getElementById('loading').style.opacity = '1';
+                document.getElementById('loading').style.transition = '0.3s ease-in-out';
+                document.getElementById('prism-logo').style.display = 'none';
+                document.getElementsByClassName('loader-circle')[0].style.display = 'none';
+                document.getElementsByClassName('loader-line-mask')[0].style.display = 'none';
+                document.getElementById('wrapper').style.opacity = '1';
+                document.getElementById('wrapper').style.display = 'block';
+            }
+            $(window).resize(function(){
+                var viewportHeight = $(window).height();
+                $('#particles-foreground').css({ height: '100vh' });
+            });
+        </script>
+    </body>
+    </html>    

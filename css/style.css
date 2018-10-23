@@ -937,6 +937,11 @@ form > :first-child:hover {
     transition-delay: 0s;
 }
 
+#list  li:hover {
+    color: #4dd0e1;
+    text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
+}
+
 #wrapper {
     opacity: 0;
     transition: 0.3s ease-in-out;
@@ -1037,6 +1042,43 @@ form > :first-child:hover {
     width: 15%;
     border: 1px solid whitesmoke;
     border-collapse: collapse;
+}
+
+/* --------------------------------------------DEVELOPERS---------------------------------------- */
+#developers {
+    width: 90vw;
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+}
+
+.developer_img {
+    width: 200px;
+    height: 200px;
+    margin: 0 5vh;
+    border-radius: 10%;
+}
+
+.developer_name, .developer_work {
+    display: flex;
+    margin: 2vh 0;
+    justify-content: center;
+}
+
+.developer_work {
+    margin-bottom: 6vh;
 }
 
 /* -------------------------------------------- MEDIA QUERIES ----------------------------------- */
