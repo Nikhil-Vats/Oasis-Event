@@ -891,7 +891,7 @@ form > :first-child:hover {
 
 #sidenav_bg2 {
     position: absolute;
-    bottom: -10vw;
+    bottom: -20vw;
     left: -10vw;
     width: 30vw;
     height: 130vh;
