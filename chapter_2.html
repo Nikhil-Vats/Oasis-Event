@@ -34,7 +34,7 @@
 </head>
 <body>
     <div id="loading">
-        <div id="particles-background" style="background-image: linear-gradient(-225deg, #FF3CAC 0%, #562B7C 52%, #2B86C5 100%);" class="vertical-centered-box"></div>
+        <div id="particles-background" style="background-image: linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%);"  class="vertical-centered-box"></div>
         <div id="particles-foreground" class="vertical-centered-box"></div>
         
         <div class="vertical-centered-box">
@@ -65,8 +65,7 @@
             Sorry you are not eligible for this round!
     </div>
     <div class="container" style="background: transparent;z-index: 30">
-        <div id="pacman"></div>
-        <div id="shoot">
+        <div id="shoot" style="display:block;">
                 <div class="timer">
                         <span></span>    
                    </div>
@@ -160,8 +159,7 @@
     <script src="./js/sidenav.js" type="text/javascript"></script>
     <script  src="js/nextChapter.js"></script>
     <script  src="js/loader.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script>
         var show = 0;
         function toggleInstructions() {
@@ -226,15 +224,15 @@
             document.getElementById('wrapper').style.opacity = '1';
             document.getElementById('wrapper').style.display = 'block';
         }
-        if ('ontouchstart' in document.documentElement) {
-            document.getElementById('pacman').style.display = 'none';
-            document.getElementById('shoot').style.display = 'block';
-            $("#pacman_js").attr("disabled", "disabled");
-        }
-        else {
-            document.getElementById('pacman').style.display = 'block';
-            document.getElementById('shoot').style.display = 'none';
-        }
+        // if ('ontouchstart' in document.documentElement) {
+        //     document.getElementById('pacman').style.display = 'none';
+        //     document.getElementById('shoot').style.display = 'block';
+        //     $("#pacman_js").attr("disabled", "disabled");
+        // }
+        // else {
+        //     document.getElementById('pacman').style.display = 'block';
+        //     document.getElementById('shoot').style.display = 'none';
+        // }
         var score = 0;
         var clicks = 0;
         function increaseScore() {
