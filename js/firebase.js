@@ -4,7 +4,7 @@ document.getElementById('loading').style.setProperty('--vh', `${vh}px`);
 window.addEventListener('resize', () => {
     // We execute the same script as before
     let vh = window.innerHeight * 0.01;
-    document.getElementById('loading').setProperty('--vh', `${vh}px`);
+    document.getElementById('loading').style.setProperty('--vh', `${vh}px`);
 });
 
 var app_fireBase = {};
@@ -127,6 +127,7 @@ function getTaps() {
     }
 }
 function submitEvent() {
+    document.getElementById('submit_btn').innerHTML = 'Submitting..';
     var score = 0;
     for(var i=1;i<=5;i++) {
         var answer;
@@ -233,7 +234,7 @@ function submitEvent() {
         }, { merge: true }).then(function() {
             console.log("Document successfully written!");
             var current_url = window.location.href;
-            var new_url = current_url.split("X")[0] + "X" + "2.html";
+            var new_url = current_url.split("_")[0] + "_2.html";
             window.location.href = new_url;
         })
         .catch(function(error) {
