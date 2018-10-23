@@ -942,7 +942,7 @@ form > :first-child:hover {
     transition: 0.3s ease-in-out;
 }
 
-#list li:hover {
+.highlightedLink {
     color: #4dd0e1;
     text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
 
