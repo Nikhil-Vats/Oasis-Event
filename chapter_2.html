@@ -58,7 +58,7 @@
         <!-- <div class="score2">Team Score: <span id="t_score">-</span></div> -->
         <div id="instructions_btn"><img onclick="toggleInstructions()" src="./images/instructions.svg"/></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
     </div>
-    <div class="fetching" style="display: none;">
+    <div class="fetching" style="display: block;">
             <p>Hang in there, we are fetching data....</p>
     </div>
     <div class="status" id="launch-screen-title">
@@ -67,12 +67,12 @@
     <div class="container" style="background: transparent;z-index: 30">
         <div id="shoot" style="display:block;">
                 <div class="timer">
-                        <span></span>    
+                        <span id="spanT"></span>    
                    </div>
                    <div class="gameover">
                        <p>GAME OVER</p>
                        <p id="stats_txt">Your score for this chapter : <span class="game-over__score" id="game-over-score">0</span></p>
-                       <button style=" width: 15vw;" id="chapter-button" class="button" type="button" onclick="nextChapter(3)">Next Chapter</button>
+                       <button style=" width: 30vw; min-height: 10vh; height: 0;" id="chapter-button" class="button" type="button" onclick="nextChapter(3)">Next Chapter</button>
                     </div>
                   <input class="input-circle input-circle1" onclick="increaseScore()" type="radio" id="circle1" >
                   <input class="input-circle input-circle2" onclick="increaseScore()" type="radio" id="circle2" >
@@ -97,7 +97,7 @@
                    <label for="circle9" class="pajaro pajaro9"><span></span></label>
                    <label for="circle10" class="pajaro pajaro10"><span></span></label>
                    <label for="circle11" class="pajaro pajaro11"><span></span></label>
-                   <span class="score_shoot" style="margin-top: 7vh; font-size: 30px; color: white;">SCORE : <span style="font-size: 35px;" class="sum"></span></span>
+                   <span class="score_shoot" style="margin-top: 7vh; font-size: 30px; color: white;">DEAD : <span style="font-size: 35px;" class="sum"></span></span>
         </div>
         <!-- <div id="stats">
             <p>Your score for this chapter is: <span id="game-over-score"></span></p>
@@ -185,7 +185,7 @@
             else {
                 showOnload();
             }
-        }, 4000); 
+        }, 1000); 
         function showOnload() {
             // alert(4);
             if(document.readyState === "complete") {

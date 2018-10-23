@@ -21,6 +21,9 @@ function getScore() {
         console.log(doc.id, " => ", doc.data());
         document.getElementById('y_score').innerHTML = doc.data().score;
         document.getElementsByClassName('fetching')[0].style.transform = 'scale(0)';
+        if(doc.data().chapter_status == 2) {
+            document.getElementById('spanT').style.animation = 'timer 20s linear';
+        }
     })
     .catch(function(error) {
         document.getElementsByClassName('fetching')[0].innerHTML = 'Network issue, please check your network connection and refresh!';
