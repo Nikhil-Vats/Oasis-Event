@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="loading">
-        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-background" class="vertical-centered-box" style="position: absolute; top:0; bottom:0;"></div>
         <div id="particles-foreground" class="vertical-centered-box"></div>
 
         <div class="vertical-centered-box">
@@ -266,7 +266,7 @@
         }
         $(window).resize(function(){
             var viewportHeight = $(window).height();
-            $('.loading').css({ height: viewportHeight });
+            $('#particles-background').css({ height: viewportHeight });
         });
         checkStatus(1);
         getTaps();
