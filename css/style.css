@@ -566,7 +566,7 @@ div.loader {
 .score2 {
     color: white;
     position: absolute;
-    right : 13vw;
+    right : 8vw;
     font-family: 'Raleway', sans-serif;
     text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
 }
@@ -940,12 +940,6 @@ form > :first-child:hover {
 #wrapper {
     opacity: 0;
     transition: 0.3s ease-in-out;
-}
-
-.highlightedLink {
-    color: #4dd0e1;
-    text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;
-
 }
 
 #close, .closed {
