@@ -173,6 +173,10 @@
             document.getElementById('wrapper').style.opacity = '1';
             document.getElementById('wrapper').style.display = 'block';
         }
+        $(window).resize(function(){
+            var viewportHeight = $(window).height();
+            $('.loaing').css({ height: viewportHeight });
+        });
         getScore();
         checkStatus(4);
     </script>

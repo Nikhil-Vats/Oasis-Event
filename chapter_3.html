@@ -328,6 +328,10 @@
             document.getElementById('wrapper').style.display = 'block';
             $("#loader1").attr("disabled", "disabled");
         }
+        $(window).resize(function(){
+            var viewportHeight = $(window).height();
+            $('.loaing').css({ height: viewportHeight });
+        });
         getScore();
         checkStatus(3);
     </script>

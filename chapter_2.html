@@ -244,6 +244,10 @@
         setTimeout(function () {    
         document.getElementById('game-over-score').innerHTML = score - clicks*25;
         },19500);
+        $(window).resize(function(){
+            var viewportHeight = $(window).height();
+            $('.loaing').css({ height: viewportHeight });
+        });
         getScore();
         checkStatus(2);
     </script>

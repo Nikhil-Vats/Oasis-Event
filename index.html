@@ -87,6 +87,10 @@
             document.getElementById('loading').style.transition = '0.3s ease-in-out';
             document.getElementById('mainpage').style.opacity = '1';
         }
+        $(window).resize(function(){
+            var viewportHeight = $(window).height();
+            $('.loaing').css({ height: viewportHeight });
+        });
     </script>
 </body>
 </html>

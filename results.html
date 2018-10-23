@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Far Out Diaries: Chapter 1</title>
+    <title>Far Out Diaries: Results</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png" sizes="64x64" />
@@ -12,7 +12,7 @@
 </head>
 <body>
     <div id="loading">
-        <div id="particles-background" class="vertical-centered-box"></div>
+        <div id="particles-background" style="background-image: linear-gradient(to right, #434343 0%, black 100%);" class="vertical-centered-box"></div>
         <div id="particles-foreground" class="vertical-centered-box"></div>
 
         <div class="vertical-centered-box">
@@ -32,8 +32,8 @@
 
     <div class="top_nav" style="background: transparent;">
         <div id="fest_icon"><img id="fest_img" src="images/favicon.png" onclick="showSidenav()"></div>
-        <div class="round_name" id="ch1">Chapter 1: Bit about BITS!</div>
-        <div class="score2">Your Score: <span id="y_score">-</span></div>
+        <div class="round_name" id="ch_res">Far Out Chronicles: Results</div>
+        <div class="score2">Your Final Score: <span id="y_score">-</span></div>
         <!-- <div class="score2">Team Score: <span id="t_score">-</span></div> -->
         <div id="instructions_btn"><img onclick="toggleInstructions()" src="./images/instructions.svg"/></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
     </div>
@@ -44,165 +44,23 @@
             Sorry you are not eligible for this round!
     </div>
     <div class="container" style="overflow-y: auto;background: transparent; z-index: 30;">
-       
-        <form>
-            <div class="nameDiv grp">
-                <!-- <p>Hey, <span id="name_space"></span> the developer wasn't getting a good idea about what to write here but he wanted to check his backend and frontend integration os User Name so he wrote this!</p> -->
-            </div>
-            <div class="ques1 grp">
-                    <label for="Ques1" class="labels">
-                        Which of these places is most likely visited by your counter culture following friends?
-                    </label>
-                    <div class="options">
-                        <label class="radio">
-                                <input type="radio" class="Options1" id="q1a1" value="1" name="optradio1">C'not
-                        </label>
-                        <label class="radio">
-                            <input type="radio" class="Options1" id= "q1a2" value="2" name="optradio1">Library's backyard
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options1" id= "q1a3" value="3" name="optradio1">Classes
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options1" id= "q1a4" value="4" name="optradio1">NAB at night
-                        </label>
-                    </div>
-            </div>
-            <div class="ques2 grp">
-                    <label for="Ques2" class="labels">
-                        Which professor do you think is the biggest fan of Counter Culture?
-                    </label>
-                    <div class="options">
-                        <label class="radio">
-                                <input type="radio" class="Options2" id="q2a1" value="1" name="optradio2">Dr. Rajiv Kumar
-                        </label>
-                        <label class="radio">
-                            <input type="radio" class="Options2" id= "q2a2" value="2" name="optradio2">Dr. Manoj Kannan
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options2" id= "q2a3" value="3" name="optradio2">Dr. Shamik Chakraborty
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options2" id= "q2a4" value="4" name="optradio2">Dr. Indresh Kumar
-                        </label>
-                    </div>
-            </div>
-            <div class="ques3 grp">
-                    <label for="Ques3" class="labels">
-                        Which of these hostels represent counter culture in the best way?
-                    </label>
-                    <div class="options">
-                        <label class="radio">
-                                <input type="radio" class="Options3" id="q3a1" value="1" name="optradio3">Vyas Bhawan
-                        </label>
-                        <label class="radio">
-                            <input type="radio" class="Options3" id= "q3a2" value="2" name="optradio3">Meera Bhawan
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options3" id= "q3a3" value="3" name="optradio3">SR Bhawan
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options3" id= "q3a4" value="4" name="optradio3">Gandhi Bhawan
-                        </label>
-                    </div>
-            </div>
-            <div class="ques4 grp">
-                    <label for="Ques4" class="labels">
-                        Which branch has most number of students from counter culture?
-                    </label>
-                    <div class="options">
-                        <label class="radio">
-                                <input type="radio" class="Options4" id="q4a1" value="1" name="optradio4">MSc. Maths
-                        </label>
-                        <label class="radio">
-                            <input type="radio" class="Options4" id= "q4a2" value="2" name="optradio4">CS
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options4" id= "q4a3" value="3" name="optradio4">B. Pharm
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options4" id= "q4a4" value="4" name="optradio4">Mechanical
-                        </label>
-                    </div>
-            </div>
-            <div class="ques5 grp">
-                    <label for="Ques5" class="labels">
-                        What are your expectations from this Oasis?
-                    </label>
-                    <div class="options">
-                        <label class="radio">
-                                <input type="radio" class="Options5" id="q5a1" value="1" name="optradio5">Action
-                        </label>
-                        <label class="radio">
-                            <input type="radio" class="Options5" id= "q5a2" value="2" name="optradio5">Fun
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options5" id= "q5a3" value="3" name="optradio5">More Sleep
-                        </label>
-                        <label class="radio">
-                                <input type="radio" class="Options5" id= "q5a4" value="4" name="optradio5">More Ghotna
-                        </label>
-                    </div>
-            </div>
-
-        </form>
-        <a type="submit" class="" onclick="submitEvent()" id="submit_btn">Submit</a>
-    </div>        
-    <div class="instructions">
-        <img id="close_btn" onclick="toggleInstructions()" src="./images/close.svg">
-        <p class="heading">Instructions</p>
-        <p class="round_instruct">A. Round 1 - Bit about BITS!</p>
-        <p class="round_descrip">
-           In this round, you have to answer 5 simple questions based on counter culture in our very own campus, 
-           you will given points on the basis of <span class="bold">most selected answer.</span>
+        <p id="disclaimer">These are the statistics of the game till now, if you wish to see your final rank please 
+            visit this website after 25th October 2018, Happy Oasis! 
         </p>
-        <p class="round_instruct">B. Know your theme!</p>
-        <p class="round_descrip">
-            You have to play 5 chapters based on  <span class="bold">different themes</span>
-            and hey, we will try our best to help you know this year's theme a little better!
-        </p>
-        <p class="round_descrip">
-            Your score will be total of scores of all rounds.
-        </p>
-        <p class="round_descrip">
-            After each chapter players will be eliminated.
-        </p>
-        <p class="round_instruct">C. Final Round: Go Virtual!</p>
-        <p class="round_descrip">
-            Play the VR game developed by <span class="bold">Coding Club</span> free of cost! Your score in the game will be added
-            to your total score. Hurry, go to the stall at <span class="bold">M-lawns</span>!
-        </p>
-    </div>
-    <div id="close" onclick="closeSidenav()">
-        <div id="close_div"></div>
-    </div> 
-    <div id="sidenav">
-    <div id="sidenav_bg1">
-    </div>
-    <div id="sidenav_content">
-        <ul id="list">
-            <a href="#" class="link"><li>Chapter 1</li></a>
-            <a href="#" class="link"><li>Chapter 2</li></a>
-            <a href="#" class="link"><li>Chapter 3</li></a>
-            <a href="#" class="link"><li>Chapter 4</li></a>
-            <a href="#" class="link"><li>Chapter 5</li></a>
-            <a href="#" class="link"><li>Chapter 6</li></a>
-        </ul>
-    </div>
-    <div id="sidenav_bg2">
-    </div>
+        <div id="results">
+        </div>
     </div>
     </div>
     <script src="./js/loader.js" type="text/javascript"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-auth.js"></script>
-    <script src="./js/nextChapter.js" type="text/javascript"></script>
     <script src="./js/firebase.js" type="text/javascript"></script>
     <!-- <script src="./js/getInfo.js" type="text/javascript"></script> -->
     <!-- <script src="./js/makeTeams.js" type="text/javascript"></script> -->
     <script src="./js/auth.js" type="text/javascript"></script>
     <script src="./js/sidenav.js" type="text/javascript"></script>
+    ,<script src="./js/results.js"></script>
     <script>
         var show = 0;
         function toggleInstructions() {
@@ -268,8 +126,6 @@
             var viewportHeight = $(window).height();
             $('.loaing').css({ height: viewportHeight });
         });
-        checkStatus(1);
-        getTaps();
         getScore();
     </script>
 </body>

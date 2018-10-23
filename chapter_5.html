@@ -180,6 +180,10 @@
             document.getElementById('app').style.opacity = '1';
             document.getElementById('app').style.display = 'block';
         }
+        $(window).resize(function(){
+            var viewportHeight = $(window).height();
+            $('.loaing').css({ height: viewportHeight });
+        });
         getScore();
         checkStatus(5);
     </script>

@@ -983,6 +983,68 @@ form > :first-child:hover {
     padding-left: 2.5vw;
 }
 
+/* --------------------------------------------RESULTS------------------------------------------- */
+
+#disclaimer {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+#results {
+    position: absolute;
+    width: 90vw;
+    left: 6vw;
+}
+
+.result {
+    list-style-type: none;
+    width: 100%;
+    height: 10vh;
+    margin: 3vh 0;
+    /* border-bottom: 1px solid white; */
+    /* box-shadow: 0, 0, 0 0 7px #fff, 0 0 9px #fff, 0 0 10px #fff, 0 0 12px #fff;           */
+}
+
+.rank {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: left;
+    list-style-type: none;
+    justify-content: center;
+    color: white;
+    width: 12%;
+    border: 1px solid whitesmoke;
+    border-collapse: collapse;
+}
+
+.playerName {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: left;
+    justify-content: center;
+    list-style-type: none;
+    color: white;
+    width: 70%;
+    border: 1px solid whitesmoke;
+    border-collapse: collapse;
+}
+
+.playerScore {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: left;
+    justify-content: center;
+    list-style-type: none;
+    color: white;
+    width: 15%;
+    border: 1px solid whitesmoke;
+    border-collapse: collapse;
+}
+
 /* -------------------------------------------- MEDIA QUERIES ----------------------------------- */
 
 @media only screen and (orientation:portrait){
