@@ -31,7 +31,7 @@
     <div id="wrapper">
 
     <div class="top_nav" style="background: transparent;">
-        <div id="fest_icon"><img id="fest_img" src="images/favicon.png" onclick="showSidenav()"></div>
+        <div id="fest_icon"><img id="fest_img" src="images/favicon.png" onclick="goToMain()"></div>
         <div class="round_name" id="ch_res">Far Out Chronicles: Results</div>
         <div class="score2">Your Final Score: <span id="y_score">-</span></div>
         <!-- <div class="score2">Team Score: <span id="t_score">-</span></div> -->
@@ -121,6 +121,11 @@
             document.getElementsByClassName('loader-line-mask')[0].style.display = 'none';
             document.getElementById('wrapper').style.opacity = '1';
             document.getElementById('wrapper').style.display = 'block';
+        }
+        function goToMain() {
+            var current_url = window.location.href;
+            var new_url = current_url.split("r")[0] + "/index.html";
+            window.location.href = new_url;
         }
         $(window).resize(function(){
             var viewportHeight = $(window).height();

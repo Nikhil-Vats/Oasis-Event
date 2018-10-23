@@ -49,6 +49,7 @@ function checkStatus(i) {
             else if(document.getElementById('menu'))
             document.getElementById('menu').style.display = 'none';
             else if(document.getElementById('app')) {
+            document.getElementById('app').style.display = 'block';    
             document.getElementById('launch-screen__title').innerHTML = 'Sorry you are not eligible for this round!';
             document.getElementById('launch-screen__description').style.display = 'none';
             document.getElementById('start-btn').style.display = 'none';
