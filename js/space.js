@@ -7,9 +7,13 @@ window.addEventListener("DOMContentLoaded", game);
 
 //General sprite load
 var sprite = new Image();
+var pumpkin = new Image();
+pumpkin.src = 'https://cdn.pixabay.com/photo/2018/02/23/10/48/bomb-3175208_960_720.png';
+
+var gun = new Image();
+gun.src = 'https://cdn.pixabay.com/photo/2017/02/01/11/22/cartoon-2029753_960_720.png';
 var spriteExplosion = new Image();
 sprite.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/600764/sprite.png';
-// https://s3-us-west-2.amazonaws.com/s.cdpn.io/600764/sprite.png
 window.onload = function() {
     spriteExplosion.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/600764/explosion.png';
 };
@@ -185,7 +189,7 @@ function game() {
 
         //Planet rotation
         ctx.translate(cW/2,cH/2);
-        ctx.rotate((_planet.deg += 0.1) * (Math.PI / 180));
+        // ctx.rotate((_planet.deg += 0.1) * (Math.PI / 180));
         ctx.drawImage(sprite, 0, 0, 200, 200, -100, -100, 200,200);
         ctx.restore();
     }
@@ -197,11 +201,7 @@ function game() {
 
         ctx.rotate(player.deg);
         ctx.drawImage(
-            sprite,
-            200,
-            0,
-            player.width,
-            player.height,
+            gun,
             player.posX,
             player.posY,
             player.width,
@@ -269,11 +269,7 @@ function game() {
                 ctx.rotate(asteroids[i].deg);
 
                 ctx.drawImage(
-                    sprite,
-                    asteroids[i].x,
-                    asteroids[i].y,
-                    asteroids[i].width,
-                    asteroids[i].height,
+                    pumpkin,
                     -(asteroids[i].width / asteroids[i].size) / 2,
                     asteroids[i].moveY += 1/(asteroids[i].size),
                     asteroids[i].width / asteroids[i].size,
