@@ -7,36 +7,48 @@ firebase.auth().signInWithRedirect(provider);
 }
 
 
-var promise2 = new Promise(function(resolve,reject) {
-  firebase.auth().getRedirectResult().then(function (result) {
-  if (result.credential) {
-      var token = result.credential.accessToken;
-      console.log('token ' + token);
-  }
-  // The signed-in user info.
-  user2 = result.user;
-  name = user2.displayName;
-  email = user2.email;
-  console.log(user2.displayName);
-  console.log('user ' + user2);
-  resolve(user2);
-}).catch(function (error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  console.log(errorCode);
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  console.log(errorMessage);
-  var email = error.email;
-  console.log(email);
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  console.log(credential);
-  // ...
-});
+// var promise2 = new Promise(function(resolve,reject) {
+//   firebase.auth().getRedirectResult().then(function (result) {
+//   if (result.credential) {
+//       var token = result.credential.accessToken;
+//       console.log('token ' + token);
+//   }
+//   // The signed-in user info.
+//   user2 = result.user;
+//   name = user2.displayName;
+//   email = user2.email;
+//   console.log(user2.displayName);
+//   console.log('user ' + user2);
+//   resolve(user2);
+// }).catch(function (error) {
+//   // Handle Errors here.
+//   var errorCode = error.code;
+//   console.log(errorCode);
+//   var errorMessage = error.message;
+//   // The email of the user's account used.
+//   console.log(errorMessage);
+//   var email = error.email;
+//   console.log(email);
+//   // The firebase.auth.AuthCredential type that was used.
+//   var credential = error.credential;
+//   console.log(credential);
+//   // ...
+// });
+// });
+
+firebase.auth().onAuthStateChanged(function(user) {
+
+    if (user) {
+        console.log(user);
+        user1 = user;
+        createUser();
+    } else {
+       console.log('User login failed');
+    }
 });
 
-promise2.then(function (user2) {
+// promise2.then(function (user2) {
+    function createUser() {
   var newUser = 0;
   db.collection("users").doc(name)
   .get()
@@ -56,11 +68,10 @@ promise2.then(function (user2) {
         score: 0,
         chapter_status: 1
       }).then(function() {
-
+        console.log("Document successfully written!");
             y_score.innerHTML = 0;
             name_space.innerHTML = name;
             loader.style.transform = 'scale(0)';
-            console.log("Document successfully written!");
             // var current_url = window.location.href;
             // var new_url = current_url.split("_")[0] + "_" + i + ".html";
             window.location.href = 'https://nikhilphalange.github.io/chapter_1.html';
@@ -85,7 +96,8 @@ promise2.then(function (user2) {
           console.log("Error getting documents: ", error);
       });
   }  
-});
+}
+// });
 
 
 
