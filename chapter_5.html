@@ -45,7 +45,7 @@
                 <img src="./images/rotate.svg">
             </div>
             <!-- <div id="wrapper" style="display: block;opacity: 1;"> -->
-            <div class="fetching" style="display:none;z-index: 2100;">
+            <div class="fetching" style="display:none;z-index: 2100;padding-top: 15vh;">
                     <p>Hang in there, we are fetching data....</p>
             </div>
             <div class="status" style="position: absolute;left: 0;top: 12vh;z-index: 4000;display: none;">
@@ -163,14 +163,14 @@
         function showOnload() {
             if(document.readyState === "complete") {
                 document.getElementById('loading').style.display = 'none';
-                document.getElementById('fetching').style.display = 'block';
+                document.getElementsByClassName('fetching')[0].style.display = 'block';
                 document.getElementById('app').style.transition = '0.2s ease-in-out';
                 document.getElementById('app').style.display = 'block';
             }
             else {
                 window.onload = function () {
                 document.getElementById('loading').style.display = 'none';
-                document.getElementById('fetching').style.display = 'block';
+                document.getElementsByClassName('fetching')[0].style.display = 'block';
                 document.getElementById('app').style.transition = '0.2s ease-in-out';
                 document.getElementById('app').style.display = 'block';
                 }
@@ -178,7 +178,7 @@
         }
         function hideLoader() {
             document.getElementById('loading').style.display = 'none';
-            document.getElementById('fetching').style.display = 'block';
+            document.getElementsByClassName('fetching')[0].style.display = 'block';
             document.getElementById('app').style.transition = '0.2s ease-in-out';
             document.getElementById('app').style.opacity = '1';
             document.getElementById('app').style.display = 'block';

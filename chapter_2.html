@@ -14,7 +14,7 @@
         #stats_txt {
             font-size: 25px;
             opacity: 0;
-            animation:gameover_text 20s linear both;
+            /* animation:gameover_text 20s linear both; */
             position: absolute;
             top: 50%;
             left: 50vw;
@@ -24,8 +24,9 @@
         }
 
         .button {
+            display: none;
             position: absolute;
-            animation:gameover_text 20s linear both;
+            /* animation:gameover_text 20s linear both; */
             top: 90%;
             left: 50vw;
             transform: translateX(-50%) translateY(-50%);
@@ -58,7 +59,7 @@
         <!-- <div class="score2">Team Score: <span id="t_score">-</span></div> -->
         <div id="instructions_btn"><img onclick="toggleInstructions()" src="./images/instructions.svg"/></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
     </div>
-    <div class="fetching" style="display: block;">
+    <div class="fetching" style="display: block;padding-top: 15vh;">
             <p>Hang in there, we are fetching data....</p>
     </div>
     <div class="status" style="position: absolute;left: 0;top: 12vh;z-index: 4000;" id="launch-screen-title">
@@ -70,7 +71,7 @@
                         <span id="spanT"></span>    
                    </div>
                    <div class="gameover">
-                       <p>GAME OVER</p>
+                       <p id="Gameover_cap">GAME OVER</p>
                        <p id="stats_txt">Your score for this chapter : <span class="game-over__score" id="game-over-score">0</span></p>
                        <button style=" width: 30vw; min-height: 10vh; height: 0;" id="chapter-button" class="button" type="button" onclick="nextChapter(3)">Next Chapter</button>
                     </div>

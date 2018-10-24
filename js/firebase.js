@@ -32,6 +32,10 @@ function getScore() {
         document.getElementsByClassName('fetching')[0].style.transform = 'scale(0)';
         if(doc.data().chapter_status == 2) {
             document.getElementById('spanT').style.animation = 'timer 20s linear';
+            document.getElementsByClassName('gameover')[0].style.animation = 'gameover 20s linear both';
+            document.getElementById('stats_txt').style.animation = 'gameover_text 20s linear both';
+            document.getElementById('Gameover_cap').style.animation = 'gameover_text 20s linear both';
+            document.getElementsByClassName('button')[0].style.animation = 'gameover_text 20s linear both';
         }
     })
     .catch(function(error) {
@@ -75,6 +79,11 @@ function checkStatus(i) {
         }
     })
     .catch(function(error) {
+        // document.body.style.backgroundColor = 'white';
+        // var div = document.createElement('div');
+        // div.className = 'error';
+        // div.innerHTML = 'Network Error, please check your internet connection!';
+        // document.body.appendChild(div);
         console.log("Error getting documents: ", error);
     });
 }

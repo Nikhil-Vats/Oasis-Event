@@ -182,14 +182,14 @@ body{
   
   .gameover {
     position:fixed; z-index:100000; left:0; top:0; bottom:0; right:0; background-color:rgba(0,0,0,0.8);
-    animation:gameover 20s linear both;
+    /* animation:gameover 20s linear both; */
   }
   
   .gameover :first-child {
     /* position: absolute; */
     margin: 5vh auto;
     opacity: 0;
-    animation:gameover_text 20s linear both;
+    /* animation:gameover_text 20s linear both; */
     font-size:80px; color:white; font-weight:bold; text-align:center; 
     text-indent:0;  
   }

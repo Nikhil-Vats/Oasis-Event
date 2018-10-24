@@ -21,6 +21,18 @@ body {
     font-weight: 500;
 }
 
+/* .error {
+    width: 70vw;
+    height: 70vh;
+    margin: -45vh auto;
+    text-align: center;
+    padding: 5vh;
+    font-size: 25px;
+    background: black;
+    color: white;
+    border: 1px solid white;
+} */
+
 #loading {
     display: block;
     opacity: 1;
