@@ -94,6 +94,9 @@ function checkStatus(i) {
             else if(document.getElementById('app')) {
             document.getElementById('app').style.display = 'block';    
             document.getElementById('launch-screen__title').innerHTML = 'Sorry you are not eligible for this round!';
+            var current_url = window.location.href;
+            var new_url = current_url.split("_")[0] + "_" + doc.data().chapter_status + ".html";
+            window.location.href = new_url;
             document.getElementById('launch-screen__description').style.display = 'none';
             document.getElementById('start-btn').style.display = 'none';
             document.getElementById('status2').style.display = 'block';
@@ -101,8 +104,15 @@ function checkStatus(i) {
             if(i==4) {
                 document.getElementsByClassName('container')[0].style.display = 'block' ;
                 document.getElementById('canvas').style.display = 'none';
+                var current_url = window.location.href;
+                var new_url = current_url.split("_")[0] + "_" + doc.data().chapter_status + ".html";
+                window.location.href = new_url;
             }
-            document.getElementsByClassName('status')[0].style.display = 'block';
+            var current_url = window.location.href;
+            var new_url = current_url.split("_")[0] + "_" + doc.data().chapter_status + ".html";
+            window.location.href = new_url;
+            document.getElementsByClassName('status')[0].style.display = 'block';                                                                                                                                                                                                                                                                                                                                                         
+
         }
     })
     .catch(function(error) {
