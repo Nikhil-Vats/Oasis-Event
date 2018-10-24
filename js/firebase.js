@@ -45,7 +45,7 @@ function getScore(name,email) {
         console.log("Error getting documents: ", error);
     });
 }
-
+function checkState() {
 firebase.auth().onAuthStateChanged(function(user) {
 
     if (user) {
@@ -56,6 +56,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/index.html';
     }
 });
+}
 
 function checkUser() {
     var user = firebase.auth().currentUser;

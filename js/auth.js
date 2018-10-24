@@ -41,16 +41,16 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log(user);
         user1 = user;
-        createUser();
+        createUser(user1);
     } else {
        console.log('User login failed');
     }
 });
 
 // promise2.then(function (user2) {
-    function createUser() {
+    function createUser(user1) {
   var newUser = 0;
-  db.collection("users").doc(name)
+  db.collection("users").doc(user1.displayName)
   .get()
   .then(function(doc) {
         console.log(doc.id, " => ", doc.data());
@@ -60,7 +60,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     newUser = 1;
   });
   if(newUser == 1) {
-      db.collection("users").doc(name).set({
+      db.collection("users").doc(user1.displayName).set({
         name: name,
         email: email,
         score: 0,
@@ -68,7 +68,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       }).then(function() {
         console.log("Document successfully written!");
             y_score.innerHTML = 0;
-            name_space.innerHTML = name;
+            // name_space.innerHTML = name;
             loader.style.transform = 'scale(0)';
             // var current_url = window.location.href;
             // var new_url = current_url.split("_")[0] + "_" + i + ".html";
@@ -79,7 +79,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         });
   }   
   else {
-      db.collection("users").doc(name)
+      db.collection("users").doc(user1.displayName)
       .get()
       .then(function(doc) {
               // doc.data() is never undefined for query doc snapshots
