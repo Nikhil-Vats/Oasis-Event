@@ -49,6 +49,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 // promise2.then(function (user2) {
     function createUser(user1) {
+        console.log(user1.displayName);
   var newUser = 0;
   db.collection("users").doc(user1.displayName)
   .get()
