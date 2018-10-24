@@ -63,7 +63,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     console.log(doc.id, " => ", doc.data());
                     // y_score.innerHTML = doc.data().score;
                     // loader.style.transform = 'scale(0)';
-                    window.location.href = 'nikhilphalange.github.io/chapter_' + doc.data().chapter_status + '.html';
+                    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_' + doc.data().chapter_status + '.html';
             })
             .catch(function(error) {
                 console.log("Error getting documents: ", error);
@@ -82,7 +82,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                     // loader.style.transform = 'scale(0)';
                     // var current_url = window.location.href;
                     // var new_url = current_url.split("_")[0] + "_" + i + ".html";
-                    window.location.href = 'https://nikhilphalange.github.io/chapter_1.html';
+                    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_1.html';
                 })
                 .catch(function(error) {
                     console.error("Error writing document: ", error);
@@ -103,7 +103,7 @@ firebase.auth().onAuthStateChanged(function(user) {
             // loader.style.transform = 'scale(0)';
             // var current_url = window.location.href;
             // var new_url = current_url.split("_")[0] + "_" + i + ".html";
-            window.location.href = 'https://nikhilphalange.github.io/chapter_1.html';
+            window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_1.html';
         })
         .catch(function(error) {
             console.error("Error writing document: ", error);
