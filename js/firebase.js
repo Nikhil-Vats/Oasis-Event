@@ -25,13 +25,11 @@ const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
 function getScore(name,email) {
     console.log(name, email);
-    db.collection("users").where("name","==",name).where("email","==",email)
-    .get()
+    db.collection("users").doc(name)
     .then(function(doc) {
         console.log(doc);
         console.log(name);
         console.log(email);
-        console.log(doc.id, " => ", doc.data());
         document.getElementById('y_score').innerHTML = doc.data().score;
         document.getElementsByClassName('fetching')[0].style.transform = 'scale(0)';
         if(doc.data().chapter_status == 2) {
