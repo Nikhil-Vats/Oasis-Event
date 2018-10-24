@@ -38,7 +38,7 @@ var promise2 = new Promise(function(resolve,reject) {
 
 promise2.then(function (user2) {
   var newUser = 0;
-  db.collection("users").where("name","==",name).where("email","==",email)
+  db.collection("users").doc(name)
   .get()
   .then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {

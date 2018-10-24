@@ -1,6 +1,6 @@
 function nextChapter(i) {
     var new_score = Number(document.getElementById('y_score').innerHTML) + Number(document.getElementById('game-over-score').innerHTML);
-    db.collection("users").doc("Nikhil").set({ score: new_score, chapter_status: i }, { merge: true }).then(function() {
+    db.collection("users").doc(name).set({ score: new_score, chapter_status: i }, { merge: true }).then(function() {
         console.log("Document successfully written!");
         if(i!=6) {
             var current_url = window.location.href;
