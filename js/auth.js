@@ -63,6 +63,7 @@ firebase.auth().getRedirectResult().then(function (result) {
   }
   // The signed-in user info.
   user2 = result.user;
+  console.log(user2.username);
   console.log('user ' + user2);
   // redirect();
   // if success redirect to
