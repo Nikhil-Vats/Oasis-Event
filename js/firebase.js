@@ -41,7 +41,8 @@ function getScore(name,email) {
         }
     })
     .catch(function(error) {
-        document.getElementsByClassName('fetching')[0].innerHTML = 'Network issue, please check your network connection and refresh!';
+        window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/index.html';
+        // document.getElementsByClassName('fetching')[0].innerHTML = 'Network issue, please check your network connection and refresh!';
         console.log("Error getting documents: ", error);
     });
 }
