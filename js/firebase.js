@@ -25,7 +25,7 @@ const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
 function getScore(name,email) {
     console.log(name, email);
-    db.collection("users").doc(name).get()
+    db.collection("users").where("email","==",email).get()
     .then(function(doc) {
         console.log(doc);
         console.log(name);
