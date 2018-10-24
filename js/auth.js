@@ -54,49 +54,76 @@ firebase.auth().onAuthStateChanged(function(user) {
   .get()
   .then(function(doc) {
         if(doc.data()) {
-            console.log('doc exists');
+            db.collection("users").doc(user1.displayName)
+            .get()
+            .then(function(doc) {
+                    // doc.data() is never undefined for query doc snapshots
+                    console.log(doc.id, " => ", doc.data());
+                    // y_score.innerHTML = doc.data().score;
+                    // loader.style.transform = 'scale(0)';
+                    window.location.href = 'nikhilphalange.github.io/chapter_' + doc.data().chapter_status + '.html';
+            })
+            .catch(function(error) {
+                console.log("Error getting documents: ", error);
+            });
         }
         else {
-            newUser = 1;
+            db.collection("users").doc(user1.displayName).set({
+                name: name,
+                email: email,
+                score: 0,
+                chapter_status: 1
+              }).then(function() {
+                console.log("Document successfully written!");
+                    // y_score.innerHTML = 0;
+                    // name_space.innerHTML = name;
+                    // loader.style.transform = 'scale(0)';
+                    // var current_url = window.location.href;
+                    // var new_url = current_url.split("_")[0] + "_" + i + ".html";
+                    window.location.href = 'https://nikhilphalange.github.io/chapter_1.html';
+                })
+                .catch(function(error) {
+                    console.error("Error writing document: ", error);
+                });
         }
         console.log(doc.id, " => ", doc.data());
    })
   .catch(function(error) {
     console.log("Error getting documents: ", error);
   });
-  if(newUser == 1) {
-      db.collection("users").doc(user1.displayName).set({
-        name: name,
-        email: email,
-        score: 0,
-        chapter_status: 1
-      }).then(function() {
-        console.log("Document successfully written!");
-            y_score.innerHTML = 0;
-            // name_space.innerHTML = name;
-            loader.style.transform = 'scale(0)';
-            // var current_url = window.location.href;
-            // var new_url = current_url.split("_")[0] + "_" + i + ".html";
-            window.location.href = 'https://nikhilphalange.github.io/chapter_1.html';
-        })
-        .catch(function(error) {
-            console.error("Error writing document: ", error);
-        });
-  }   
-  else {
-      db.collection("users").doc(user1.displayName)
-      .get()
-      .then(function(doc) {
-              // doc.data() is never undefined for query doc snapshots
-              console.log(doc.id, " => ", doc.data());
-              y_score.innerHTML = doc.data().score;
-              loader.style.transform = 'scale(0)';
-              window.location.href = 'nikhilphalange.github.io/chapter_' + doc.data().chapter_status + '.html';
-      })
-      .catch(function(error) {
-          console.log("Error getting documents: ", error);
-      });
-  }  
+//   if(newUser == 1) {
+//       db.collection("users").doc(user1.displayName).set({
+//         name: name,
+//         email: email,
+//         score: 0,
+//         chapter_status: 1
+//       }).then(function() {
+//         console.log("Document successfully written!");
+//             y_score.innerHTML = 0;
+//             // name_space.innerHTML = name;
+//             loader.style.transform = 'scale(0)';
+//             // var current_url = window.location.href;
+//             // var new_url = current_url.split("_")[0] + "_" + i + ".html";
+//             window.location.href = 'https://nikhilphalange.github.io/chapter_1.html';
+//         })
+//         .catch(function(error) {
+//             console.error("Error writing document: ", error);
+//         });
+//   }   
+//   else {
+//       db.collection("users").doc(user1.displayName)
+//       .get()
+//       .then(function(doc) {
+//               // doc.data() is never undefined for query doc snapshots
+//               console.log(doc.id, " => ", doc.data());
+//               y_score.innerHTML = doc.data().score;
+//               loader.style.transform = 'scale(0)';
+//               window.location.href = 'nikhilphalange.github.io/chapter_' + doc.data().chapter_status + '.html';
+//       })
+//       .catch(function(error) {
+//           console.log("Error getting documents: ", error);
+//       });
+//   }  
 }
 // });
 
