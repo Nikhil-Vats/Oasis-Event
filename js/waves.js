@@ -1,4 +1,4 @@
-console.clear();
+// console.clear();
 var renderer = new THREE.WebGLRenderer({
   canvas: document.getElementById("waves"),
   antialias: true
