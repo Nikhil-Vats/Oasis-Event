@@ -629,7 +629,7 @@ div.loader {
     transform: scale(0);
     overflow-y: auto;
     padding: 0 10px;
-    z-index: 5110;
+    z-index: 5310;
     box-shadow: 0 0 5px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 25px white, 0 0 15px white;
 }
 
