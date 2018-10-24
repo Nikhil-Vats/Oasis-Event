@@ -53,11 +53,16 @@ firebase.auth().onAuthStateChanged(function(user) {
   db.collection("users").doc(user1.displayName)
   .get()
   .then(function(doc) {
+        if(doc.data()) {
+            console.log('doc exists');
+        }
+        else {
+            newUser = 1;
+        }
         console.log(doc.id, " => ", doc.data());
    })
   .catch(function(error) {
     console.log("Error getting documents: ", error);
-    newUser = 1;
   });
   if(newUser == 1) {
       db.collection("users").doc(user1.displayName).set({
