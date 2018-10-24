@@ -272,8 +272,8 @@ function game() {
                     pumpkin,
                     -(asteroids[i].width / asteroids[i].size) / 2,
                     asteroids[i].moveY += 1/(asteroids[i].size),
-                    asteroids[i].width / asteroids[i].size,
-                    asteroids[i].height / asteroids[i].size
+                    asteroids[i].width / (2*asteroids[i].size),
+                    asteroids[i].height / (2*asteroids[i].size)
                 );
 
                 ctx.restore();

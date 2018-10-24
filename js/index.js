@@ -163,7 +163,7 @@ App = function () {
       // yes, its fake ;)) By the way pretty realistic calculation)
       var max = 9000;
       var min = -1500;
-      var result = (state.score - min) * 100 / (max - min);
+      var result = (state.smin) * 100 / (max - min);
       if (result < 0) result = 0;
       if (result > 100) result = 100;
       ui.comparingPercent.innerText = parseInt(result, 10) + '%';

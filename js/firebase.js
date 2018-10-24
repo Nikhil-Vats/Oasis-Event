@@ -219,7 +219,7 @@ function submitEvent() {
                 // console.log(doc.data());
             }
             else {
-                score = score + 10;
+                score = score + 20;
                 // alert(`For question ${i} answer is false`);
                 // alert(`Added score 10 for ques ${i},${score}`);
                 // console.log(doc.data());
@@ -235,7 +235,7 @@ function submitEvent() {
                 // console.log(doc.data());
             }
             else {
-                score = score + 10;
+                score = score + 20;
                 // alert(`For question ${i} answer is false`);
                 // alert(`Added score 10 for ques ${i},${score}`);
                 // console.log(doc.data());
@@ -247,7 +247,7 @@ function submitEvent() {
                 score = score + 50;
             }
             else {
-                score = score + 10;
+                score = score + 20;
             }
         }
         else if (tapDold[i] == max[i]) {
