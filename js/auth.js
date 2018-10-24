@@ -81,7 +81,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         });
   }   
   else {
-      db.collection("users").where("name","==",name).where("email","==",email)
+      db.collection("users").doc(name)
       .get()
       .then(function(querySnapshot) {
           querySnapshot.forEach(function(doc) {
