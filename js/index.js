@@ -20,7 +20,7 @@ var config = {
   xVel: 0.05,
   yVel: 0.055,
   score: [50, -25],
-  time: 45,
+  time: 35,
   defaultMode: 'shape',
   bonusRow: 10,
   particles: 20,
