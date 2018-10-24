@@ -39,24 +39,6 @@ firebase.auth().signInWithRedirect(provider);
 
 
 firebase.auth().getRedirectResult().then(function (result) {
-  // var user = firebase.auth().currentUser;
-  // name = "no name";
-  // redirect();
-  // if (user != null) {
-  //   // alert('Hi this is in if user != null');
-  // //   redirect();
-  //   user.providerData.forEach(function (profile) {
-  //     name = profile.displayName;
-  //     // alert('Hi this is in in if user != null');
-  //     // redirect();
-  //     console.log("Sign-in provider: " + profile.providerId);
-  //     console.log("  Provider-specific UID: " + profile.uid);
-  //     console.log("  Name: " + profile.displayName);
-  //     console.log("  Email: " + profile.email);
-  //     console.log("  Photo URL: " + profile.photoURL);
-  //   });
-  // }
-  // This gives you a Google Access Token. You can use it to access the Google API.
   if (result.credential) {
       var token = result.credential.accessToken;
       console.log('token ' + token);
@@ -67,13 +49,7 @@ firebase.auth().getRedirectResult().then(function (result) {
   email = user2.email;
   console.log(user2.displayName);
   console.log('user ' + user2);
-  if(user2) {
-    createUser();
-  }
-  // if success redirect to
-  // $state.go('maps-fullwidth');
-
-  // ...
+  createUser();
 }).catch(function (error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -89,12 +65,8 @@ firebase.auth().getRedirectResult().then(function (result) {
   // ...
 });
 
-// function redirect() {
-//   window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/round1.html';
-//   createUser();
-// }
-
 function createUser() {
+  if(name && email)  {
   var newUser = 0;
   db.collection("users").where("name","==",name).where("email","==",email)
   .get()
@@ -143,6 +115,7 @@ function createUser() {
           console.log("Error getting documents: ", error);
       });
   }  
+}
 }
 
 
