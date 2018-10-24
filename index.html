@@ -34,10 +34,10 @@
     </div>
     <div id="mainpage">
     <div id="background">
-        <canvas id="waves"></canvas>
+        <canvas id="waves" style="z-index: -10;"></canvas>
     </div>    
     <!-- <canvas id="canvas"></canvas> -->
-    <div id="homepage">
+    <div id="homepage" style="z-index: 5100; position: absolute; top: 0;">
         <div id="fest"><img src="images/favicon.png"></div>
         <div id="heading" class="logo">
             <div id="event_name">FAR OUT DIARIES</div>
@@ -87,10 +87,6 @@
             document.getElementById('loading').style.transition = '0.3s ease-in-out';
             document.getElementById('mainpage').style.opacity = '1';
         }
-        $(window).resize(function(){
-            var viewportHeight = $(window).height();
-            $('#particles-foreground').css({ height: viewportHeight });
-        });
     </script>
 </body>
 </html>
