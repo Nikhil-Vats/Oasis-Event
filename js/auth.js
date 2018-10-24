@@ -49,6 +49,7 @@ firebase.auth().getRedirectResult().then(function (result) {
   email = user2.email;
   console.log(user2.displayName);
   console.log('user ' + user2);
+  console.log('hey');
   createUser();
 }).catch(function (error) {
   // Handle Errors here.
