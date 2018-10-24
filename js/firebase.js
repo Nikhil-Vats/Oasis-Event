@@ -29,6 +29,8 @@ function getScore(name,email) {
     .get()
     .then(function(doc) {
         console.log(doc);
+        console.log(name);
+        console.log(email);
         console.log(doc.id, " => ", doc.data());
         document.getElementById('y_score').innerHTML = doc.data().score;
         document.getElementsByClassName('fetching')[0].style.transform = 'scale(0)';
