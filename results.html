@@ -31,7 +31,7 @@
     <div id="wrapper">
 
     <div class="top_nav" style="background: transparent;">
-        <div id="fest_icon"><img id="fest_img" src="images/favicon.png" onclick="goToMain()"></div>
+        <div id="fest_icon"><img id="fest_img" src="images/favicon.png" onclick="showSidenav()"></div>
         <div class="round_name" id="ch_res">Far Out Diaries: Results</div>
         <div class="score2">Your Final Score: <span id="y_score">-</span></div>
         <!-- <div class="score2">Team Score: <span id="t_score">-</span></div> -->
@@ -54,6 +54,28 @@
                 <li class="playerScore" style="font-size: 20px;">Score</li>
             </div>
         </div>
+    </div>
+    </div>
+    <div id="close" onclick="closeSidenav()">
+        <div id="close_div"></div>
+    </div> 
+    <div id="sidenav">
+    <div id="sidenav_bg1">
+    </div>
+    <div id="sidenav_content">
+        <ul id="list">
+            <a href="./chapter_1.html" class="link"><li>Chapter 1</li></a>
+            <a href="./chapter_2.html" class="link"><li>Chapter 2</li></a>
+            <a href="./chapter_3.html" class="link"><li>Chapter 3</li></a>
+            <a href="./chapter_4.html" class="link"><li>Chapter 4</li></a>
+            <a href="./chapter_5.html" class="link"><li style="color: #4dd0e1;
+                text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;">Chapter 5</li></a>
+            <a href="./results.html" class="link"><li>Results</li></a>
+            <a href="./developers.html" class="link"><li style="color: #4dd0e1;
+                text-shadow: 0 0 5px #4dd0e1, 0 0 10px #4dd0e1, 0 0 20px #4dd0e1, 0 0 30px #4dd0e1, 0 0 40px #4dd0e1, 0 0 55px #4dd0e1, 0 0 75px #4dd0e1;">Developers</li></a>
+        </ul>
+    </div>
+    <div id="sidenav_bg2">
     </div>
     </div>
     <script src="./js/loader.js" type="text/javascript"></script>
