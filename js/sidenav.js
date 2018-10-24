@@ -23,9 +23,9 @@ function showSidenav() {
     sidenav_bg1.style.left = '-15vw';
     sidenav_content.style.transitionDelay = '0.4s';
     sidenav_content.style.transitionDuration = '0.3s';
-    sidenav_bg1.style.zIndex = '2100';
-    sidenav_bg2.style.zIndex = '2050';
-    sidenav_content.style.zIndex = '2150';
+    sidenav_bg1.style.zIndex = '5100';
+    sidenav_bg2.style.zIndex = '5050';
+    sidenav_content.style.zIndex = '5150';
     
     closeButton.style.filter = 'opacity(1)';
     closeButton.style.transitionDuration = '0.3s';
