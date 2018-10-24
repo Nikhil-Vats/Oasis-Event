@@ -24,6 +24,7 @@ var db = firebase.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
 function getScore(name,email) {
+    console.log(name, email);
     db.collection("users").where("name","==",name).where("email","==",email)
     .get()
     .then(function(doc) {
