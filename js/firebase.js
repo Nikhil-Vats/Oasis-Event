@@ -49,10 +49,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
     console.log(user);
     user1 = user;
-    alert('Hi this is in if user');
     // redirect();
     } else {
-    console.log('No user is signed in.');
+    window.location.href = 'nikhilphalange.github.io/Oasis-Event/index.html';
     }
 });
 
