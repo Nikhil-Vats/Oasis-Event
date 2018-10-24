@@ -1,4 +1,4 @@
-var user1, name;
+var user1, name, user2;
 // var y_score = document.getElementById('y_score');
 // var loader = document.getElementsByClassName('fetching')[0];
 // var name_space = document.getElementById('name_space');
@@ -62,7 +62,7 @@ firebase.auth().getRedirectResult().then(function (result) {
       console.log('token ' + token);
   }
   // The signed-in user info.
-  var user2 = result.user;
+  user2 = result.user;
   console.log('user ' + user2);
   // redirect();
   // if success redirect to
