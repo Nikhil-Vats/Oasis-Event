@@ -52,11 +52,9 @@ firebase.auth().onAuthStateChanged(function(user) {
   var newUser = 0;
   db.collection("users").doc(name)
   .get()
-  .then(function(querySnapshot) {
-    querySnapshot.forEach(function(doc) {
+  .then(function(doc) {
         console.log(doc.id, " => ", doc.data());
-    });
-  })
+   })
   .catch(function(error) {
     console.log("Error getting documents: ", error);
     newUser = 1;
@@ -83,14 +81,12 @@ firebase.auth().onAuthStateChanged(function(user) {
   else {
       db.collection("users").doc(name)
       .get()
-      .then(function(querySnapshot) {
-          querySnapshot.forEach(function(doc) {
+      .then(function(doc) {
               // doc.data() is never undefined for query doc snapshots
               console.log(doc.id, " => ", doc.data());
               y_score.innerHTML = doc.data().score;
               loader.style.transform = 'scale(0)';
               window.location.href = 'nikhilphalange.github.io/chapter_' + doc.data().chapter_status + '.html';
-          });
       })
       .catch(function(error) {
           console.log("Error getting documents: ", error);
