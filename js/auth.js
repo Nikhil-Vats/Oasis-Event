@@ -35,20 +35,24 @@ firebase.auth().signInWithRedirect(provider);
 //   // ...
 // });
 // });
+function checkInitialState() {
+    firebase.auth().onAuthStateChanged(function(user) {
 
-firebase.auth().onAuthStateChanged(function(user) {
-
-    if (user) {
-        console.log(user);
-        user1 = user;
-        createUser(user1);
-    } else {
-       console.log('User login failed');
-    }
-});
+        if (user) {
+            console.log(user);
+            user1 = user;
+            createUser(user1);
+        } else {
+        console.log('User login failed');
+        }
+    });
+}    
 
 // promise2.then(function (user2) {
     function createUser(user1) {
+        var url = window.location.href;
+        var no = url.split("_")[1] - ".html";
+        console.log(no);
         console.log(user1.displayName);
         console.log(user1.email);
   var newUser = 0;
@@ -63,6 +67,10 @@ firebase.auth().onAuthStateChanged(function(user) {
                     console.log(doc.id, " => ", doc.data());
                     // y_score.innerHTML = doc.data().score;
                     // loader.style.transform = 'scale(0)';
+                    if(doc.data().chapter_status == Number(no)) {
+                        console.log('Right page');
+                    }
+                    else
                     window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_' + doc.data().chapter_status + '.html';
             })
             .catch(function(error) {
