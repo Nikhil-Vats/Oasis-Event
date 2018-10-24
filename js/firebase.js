@@ -11,7 +11,7 @@ var app_fireBase = {};
 
 var config = {
     apiKey: "AIzaSyDz7s1lXGSVhAEj8TIQSsEjeatPO5h9e2c",
-    authDomain: "oasis-event.firebaseapp.com",
+    authDomain: "oasis-event.firebaseapp.com/chapter_1.html",
     databaseURL: "https://oasis-event.firebaseio.com",
     projectId: "oasis-event",
     storageBucket: "oasis-event.appspot.com",
@@ -23,8 +23,8 @@ firebase.initializeApp(config);
 var db = firebase.firestore();
 const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
-function getScore() {
-    db.collection("users").doc("Nikhil")
+function getScore(name,email) {
+    db.collection("users").where("name","==",name).where("email","==",email)
     .get()
     .then(function(doc) {
         console.log(doc.id, " => ", doc.data());
@@ -47,11 +47,11 @@ function getScore() {
 firebase.auth().onAuthStateChanged(function(user) {
 
     if (user) {
-    console.log(user);
-    user1 = user;
-    // redirect();
+        console.log(user);
+        user1 = user;
+        getScore(user.displayName,user.email);
     } else {
-    window.location.href = 'nikhilphalange.github.io/Oasis-Event/index.html';
+        window.location.href = 'nikhilphalange.github.io/Oasis-Event/index.html';
     }
 });
 
