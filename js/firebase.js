@@ -51,7 +51,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         user1 = user;
         getScore(user.displayName,user.email);
     } else {
-        window.location.href = 'nikhilphalange.github.io/Oasis-Event/index.html';
+        window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/index.html';
     }
 });
 
