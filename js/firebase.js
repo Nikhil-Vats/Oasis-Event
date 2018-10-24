@@ -28,6 +28,7 @@ function getScore(name,email) {
     db.collection("users").where("name","==",name).where("email","==",email)
     .get()
     .then(function(doc) {
+        console.log(doc);
         console.log(doc.id, " => ", doc.data());
         document.getElementById('y_score').innerHTML = doc.data().score;
         document.getElementsByClassName('fetching')[0].style.transform = 'scale(0)';
