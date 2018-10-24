@@ -90,6 +90,23 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log(doc.id, " => ", doc.data());
    })
   .catch(function(error) {
+    db.collection("users").doc(user1.displayName).set({
+        name: name,
+        email: email,
+        score: 0,
+        chapter_status: 1
+      }).then(function() {
+        console.log("Document successfully written!");
+            // y_score.innerHTML = 0;
+            // name_space.innerHTML = name;
+            // loader.style.transform = 'scale(0)';
+            // var current_url = window.location.href;
+            // var new_url = current_url.split("_")[0] + "_" + i + ".html";
+            window.location.href = 'https://nikhilphalange.github.io/chapter_1.html';
+        })
+        .catch(function(error) {
+            console.error("Error writing document: ", error);
+        });
     console.log("Error getting documents: ", error);
   });
 //   if(newUser == 1) {
