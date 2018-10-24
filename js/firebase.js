@@ -44,6 +44,20 @@ function getScore() {
     });
 }
 
+
+function checkUser() {
+    var user = firebase.auth().currentUser;
+    var name, email, photoUrl, uid, emailVerified;
+    if (user != null) {
+    name = user.displayName;
+    email = user.email;
+    // photoUrl = user.photoURL;
+    emailVerified = user.emailVerified;
+    uid = user.uid;  
+    }
+    console.log(user);
+}
+
 function checkStatus(i) {
     var status = 0;
     db.collection("users").doc("Nikhil")
