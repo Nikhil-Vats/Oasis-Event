@@ -67,6 +67,7 @@ firebase.auth().getRedirectResult().then(function (result) {
 
 function createUser() {
   if(name && email)  {
+      alert('hii');
   var newUser = 0;
   db.collection("users").where("name","==",name).where("email","==",email)
   .get()
