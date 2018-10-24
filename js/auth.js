@@ -50,6 +50,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 // promise2.then(function (user2) {
     function createUser(user1) {
         console.log(user1.displayName);
+        console.log(user1.email);
   var newUser = 0;
   db.collection("users").doc(user1.displayName)
   .get()
@@ -70,8 +71,8 @@ firebase.auth().onAuthStateChanged(function(user) {
         }
         else {
             db.collection("users").doc(user1.displayName).set({
-                name: name,
-                email: email,
+                name: user1.displayName,
+                email: user1.email,
                 score: 0,
                 chapter_status: 1
               }).then(function() {
@@ -91,8 +92,8 @@ firebase.auth().onAuthStateChanged(function(user) {
    })
   .catch(function(error) {
     db.collection("users").doc(user1.displayName).set({
-        name: name,
-        email: email,
+        name: user1.displayName,
+        email: user1.email,
         score: 0,
         chapter_status: 1
       }).then(function() {
