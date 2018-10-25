@@ -37,7 +37,7 @@ function getScore(name,email) {
             document.getElementsByClassName('gameover')[0].style.animation = 'gameover 20s linear both';
             document.getElementById('stats_txt').style.animation = 'gameover_text 20s linear both';
             document.getElementById('Gameover_cap').style.animation = 'gameover_text 20s linear both';
-            document.getElementsByClassName('button')[0].style.animation = 'gameover_text 3s linear both';
+            document.getElementsByClassName('button')[0].style.animation = 'gameover_text 2s linear both';
             setTimeout(function () {    
                 document.getElementById('game-over-score').innerHTML = score - clicks*25;
                 document.getElementById('game-over-score').style.opacity = '1';
