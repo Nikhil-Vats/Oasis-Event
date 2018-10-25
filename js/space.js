@@ -205,7 +205,7 @@ function game() {
             gun,
             player.posX,
             player.posY,
-            player.width,
+            player.width*8,
             player.height
         );
 
@@ -273,8 +273,8 @@ function game() {
                     pumpkin,
                     -(asteroids[i].width / asteroids[i].size) / 2,
                     asteroids[i].moveY += 1/(asteroids[i].size),
-                    asteroids[i].width / (2*asteroids[i].size),
-                    asteroids[i].height / (2*asteroids[i].size)
+                    asteroids[i].width / (asteroids[i].size),
+                    asteroids[i].height / (asteroids[i].size)
                 );
 
                 ctx.restore();
@@ -333,8 +333,8 @@ function game() {
             spriteY,
             256,
             256,
-            - (asteroid.width / asteroid.size)/2,
-            -(asteroid.height / asteroid.size)/2,
+            - (asteroid.width / asteroid.size)/1.3,
+            -(asteroid.height / asteroid.size)/1.3,
             asteroid.width / asteroid.size,
             asteroid.height / asteroid.size
         );
