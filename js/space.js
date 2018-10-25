@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", game);
 //General sprite load
 var sprite = new Image();
 var pumpkin = new Image();
-pumpkin.src = 'https://cdn.pixabay.com/photo/2018/02/23/10/48/bomb-3175208_960_720.png';
+pumpkin.src = "";
 
 var gun = new Image();
 gun.src = 'https://cdn.pixabay.com/photo/2017/02/01/11/22/cartoon-2029753_960_720.png';
