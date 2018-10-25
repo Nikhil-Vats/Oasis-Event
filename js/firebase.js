@@ -102,8 +102,15 @@ function checkStatus(i) {
             document.getElementById('app').style.display = 'block';    
             document.getElementById('launch-screen__title').innerHTML = 'Sorry you are not eligible for this round!';
             var current_url = window.location.href;
-            var new_url = current_url.split("_")[0] + "_" + doc.data().chapter_status + ".html";
-            window.location.href = new_url;
+            if(doc.data().chapter_status != 6) {
+                var new_url = current_url.split("_")[0] + "_" + doc.data().chapter_status + ".html";
+                window.location.href = new_url;
+            }
+            else {
+                    var current_url = window.location.href;
+                    var new_url = current_url.split("c")[0] + "results.html";
+                    window.location.href = new_url;
+            }
             document.getElementById('launch-screen__description').style.display = 'none';
             document.getElementById('start-btn').style.display = 'none';
             document.getElementById('status2').style.display = 'block';
