@@ -17,5 +17,6 @@ db.collection("users").orderBy("score","desc").get().then(function(querySnapshot
         div.appendChild(li3);
         div.className = 'result';
         document.getElementById('results').appendChild(div);
+        document.getElementsByClassName('fetching')[0].style.display = 'none';
     });
 });
