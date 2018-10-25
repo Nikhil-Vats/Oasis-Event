@@ -25,7 +25,7 @@ const settings = {/* your settings... */ timestampsInSnapshots: true};
 db.settings(settings);
 function getScore(name,email) {
     console.log(name, email);
-    db.collection("users").doc(name).get()
+    db.collection("users").doc(user1.displayName).get()
     .then(function(doc) {
         console.log(doc);
         console.log(name);
@@ -52,6 +52,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         console.log(user);
         user1 = user;
         getScore(user.displayName,user.email);
+        checkStatus(ch_status);
     } else {
         window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/index.html';
     }
@@ -72,7 +73,7 @@ function checkUser() {
 
 function checkStatus(i) {
     var status = 0;
-    db.collection("users").doc(name)
+    db.collection("users").doc(user1.displayName)
     .get()
     .then(function(doc) {
         status = doc.data().chapter_status;
@@ -272,7 +273,7 @@ function submitEvent() {
         
     }
 
-        db.collection("users").doc(name).set({
+        db.collection("users").doc(user1.displayName).set({
             name: name,
             score: score,
             chapter_status: 2,
