@@ -24,7 +24,7 @@ html {
     position: fixed;
     width: 35px;
     height: 35px;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/600764/full-screen.png) no-repeat;
+    background: #231557 no-repeat;
     z-index: 10;
     display: block;
     right: 10px;

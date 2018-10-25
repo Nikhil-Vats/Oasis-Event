@@ -38,6 +38,13 @@ function getScore(name,email) {
             document.getElementById('stats_txt').style.animation = 'gameover_text 20s linear both';
             document.getElementById('Gameover_cap').style.animation = 'gameover_text 20s linear both';
             document.getElementsByClassName('button')[0].style.animation = 'gameover_text 20s linear both';
+            setTimeout(function () {    
+                document.getElementById('game-over-score').innerHTML = score - clicks*25;
+                document.getElementById('game-over-score').style.opacity = '1';
+                document.getElementById('game-over-score').style.display = 'block';
+                document.getElementById('chapter-button').style.display = 'block';
+                document.getElementById('chapter-button').style.opacity = '1';
+            },19500);
         }
     })
     .catch(function(error) {

@@ -8,10 +8,11 @@ window.addEventListener("DOMContentLoaded", game);
 //General sprite load
 var sprite = new Image();
 var pumpkin = new Image();
-pumpkin.src = "";
-
+pumpkin.src = "../images/skull_webd.png";
+var sun = new Image();
+sun.src = '../images/hat_civ_webd.png';
 var gun = new Image();
-gun.src = 'https://cdn.pixabay.com/photo/2017/02/01/11/22/cartoon-2029753_960_720.png';
+gun.src = '../images/guitar.png';
 var spriteExplosion = new Image();
 sprite.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/600764/sprite.png';
 window.onload = function() {
@@ -190,7 +191,7 @@ function game() {
         //Planet rotation
         ctx.translate(cW/2,cH/2);
         // ctx.rotate((_planet.deg += 0.1) * (Math.PI / 180));
-        ctx.drawImage(sprite, 0, 0, 200, 200, -100, -100, 200,200);
+        ctx.drawImage(sun, -100, -100, 200,200);
         ctx.restore();
     }
 

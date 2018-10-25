@@ -239,9 +239,13 @@
             clicks++;
             score = score + 50;
         }
-        setTimeout(function () {    
-        document.getElementById('game-over-score').innerHTML = score - clicks*25;
-        },19500);
+        // setTimeout(function () {    
+        // document.getElementById('game-over-score').innerHTML = score - clicks*25;
+        // document.getElementById('game-over-score').style.opacity = '1';
+        // document.getElementById('game-over-score').style.display = 'block';
+        // document.getElementById('chapter-button').style.display = 'block';
+        // document.getElementById('chapter-button').style.opacity = '1';
+        // },19500);
         $(window).resize(function(){
             var viewportHeight = $(window).height();
             $('#particles-foreground').css({ height: viewportHeight });
