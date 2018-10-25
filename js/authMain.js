@@ -19,11 +19,11 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 function createUser(user1) {
-var url = window.location.href;
-var no = url.split("_")[1] - ".html";
-console.log(no);
-console.log(user1.displayName);
-console.log(user1.email);
+    var url = window.location.href;
+    var no = url.split("_")[1] - ".html";
+    console.log(no);
+    console.log(user1.displayName);
+    console.log(user1.email);
   var newUser = 0;
   db.collection("users").doc(user1.displayName)
   .get()

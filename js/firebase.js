@@ -42,7 +42,6 @@ function getScore(name,email) {
     })
     .catch(function(error) {
         window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/index.html';
-        // document.getElementsByClassName('fetching')[0].innerHTML = 'Network issue, please check your network connection and refresh!';
         console.log("Error getting documents: ", error);
     });
 }
@@ -61,7 +60,6 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 function checkUser() {
     var user = firebase.auth().currentUser;
-    var name, email, photoUrl, uid, emailVerified;
     if (user != null) {
     name = user.displayName;
     email = user.email;
@@ -74,7 +72,7 @@ function checkUser() {
 
 function checkStatus(i) {
     var status = 0;
-    db.collection("users").doc(name)
+    db.collection("users").doc(user1.displayName)
     .get()
     .then(function(doc) {
         status = doc.data().chapter_status;
