@@ -34,6 +34,7 @@ function getScore(name,email) {
         document.getElementsByClassName('fetching')[0].style.transform = 'scale(0)';
         if(doc.data().chapter_status == 2) {
             document.getElementById('spanT').style.animation = 'timer 20s linear';
+            document.getElementsByClassName('gameover')[0].style.opacity = '1';
             document.getElementsByClassName('gameover')[0].style.animation = 'gameover 20s linear both';
             document.getElementById('stats_txt').style.animation = 'gameover_text 20s linear both';
             document.getElementById('Gameover_cap').style.animation = 'gameover_text 20s linear both';
@@ -74,7 +75,7 @@ function checkUser() {
 
 function checkStatus(i) {
     var status = 0;
-    db.collection("users").doc("Nikhil")
+    db.collection("users").doc(name)
     .get()
     .then(function(doc) {
         status = doc.data().chapter_status;
@@ -138,7 +139,7 @@ function showResult() {
 }
 
 function sendScore(score) {
-    db.collection("users").doc("Nikhil").set({
+    db.collection("users").doc(name).set({
         chapter_score: Number(score),
     }, {merge: true})
     .then(function() {
@@ -274,8 +275,8 @@ function submitEvent() {
         
     }
 
-        db.collection("users").doc("Nikhil").set({
-            name: "Nikhil_new",
+        db.collection("users").doc(name).set({
+            name: name,
             score: score,
             chapter_status: 2,
         }, { merge: true }).then(function() {
