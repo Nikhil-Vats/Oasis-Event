@@ -625,7 +625,7 @@ div.loader {
 
 #play_btn {
     position: absolute;
-    top: 80vh;
+    top: 75vh;
     left: 50%;
     -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
