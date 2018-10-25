@@ -272,7 +272,7 @@ function submitEvent() {
         
     }
 
-        db.collection("users").doc(name).set({
+        db.collection("users").doc(user1.displayName).set({
             name: name,
             score: score,
             chapter_status: 2,
