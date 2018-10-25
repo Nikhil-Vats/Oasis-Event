@@ -72,7 +72,7 @@ function checkUser() {
 
 function checkStatus(i) {
     var status = 0;
-    db.collection("users").doc(user1.displayName)
+    db.collection("users").doc(name)
     .get()
     .then(function(doc) {
         status = doc.data().chapter_status;
@@ -272,7 +272,7 @@ function submitEvent() {
         
     }
 
-        db.collection("users").doc(user1.displayName).set({
+        db.collection("users").doc(name).set({
             name: name,
             score: score,
             chapter_status: 2,
