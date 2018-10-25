@@ -10,9 +10,11 @@ var sprite = new Image();
 var pumpkin = new Image();
 pumpkin.src = "https://nikhilphalange.github.io/Oasis-Event/images/skull_webd.png";
 var sun = new Image();
-sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hat_civ_webd.png';
+sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hat_civ_webd1.png';
 var gun = new Image();
 gun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/guitar.png';
+var music = new Image();
+music.src = 'https://nikhilphalange.github.io/Oasis-Event/images/music.png'
 var spriteExplosion = new Image();
 sprite.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/600764/sprite.png';
 window.onload = function() {
@@ -203,9 +205,9 @@ function game() {
         ctx.rotate(player.deg);
         ctx.drawImage(
             gun,
-            player.posX,
+            player.posX*4,
             player.posY,
-            player.width*8,
+            player.width*4,
             player.height
         );
 
@@ -273,7 +275,7 @@ function game() {
                     pumpkin,
                     -(asteroids[i].width / asteroids[i].size) / 2,
                     asteroids[i].moveY += 1/(asteroids[i].size),
-                    asteroids[i].width / (asteroids[i].size),
+                    asteroids[i].width*4 / (asteroids[i].size),
                     asteroids[i].height / (asteroids[i].size)
                 );
 
