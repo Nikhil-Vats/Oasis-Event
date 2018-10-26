@@ -10,7 +10,7 @@ var sprite = new Image();
 var pumpkin = new Image();
 pumpkin.src = "https://nikhilphalange.github.io/Oasis-Event/images/skull_webd.png";
 var sun = new Image();
-sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hat_civ_webd1.png';
+sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hippie_grp.png';
 var gun = new Image();
 gun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/guitar.png';
 var music = new Image();
@@ -133,11 +133,7 @@ function game() {
                 ctx.rotate(bullets[i].deg);
 
                 ctx.drawImage(
-                    sprite,
-                    211,
-                    100,
-                    50,
-                    75,
+                    music,
                     bullets[i].x,
                     bullets[i].y -= 20,
                     19,
