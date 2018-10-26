@@ -138,18 +138,15 @@
         <div class="menu__content">
           <!-- <h1>Rapid Sorting Game</h1> -->
           <h2>How to play :</h2>
-          <ul>
-            <li>Remember card (shape and color)</li>
-            <li>Compare the current card with previous one</li>
-            <li>There are two cases:</li>
-            <ol>
-              <li>The current shape has a dot in the center: comparative attribute is color</li>
-              <li>The current shape HASN'T a dot in the center: comparative attribute is shape</li>
-            </ol>
-            <li>Same attribute: swipe the same direction</li>
-            <li>Different attribute: swipe opposite direction</li>
-            <li>First card: swipe any direction</li>
-          </ul>
+        <ul>
+          <li>Remember card (shape and color)</li>
+          <li>Compare the current card with previous one</li>
+          <li>There are two cases:</li>
+          <ol>
+            <li>The shape has a dot in the center: compare color, if same as previous one, swipe in same direction as previous, if not then opposite</li>
+            <li>The current shape does not have a dot in the center: compare shape, if same as previous one, swipe in same direction as previous, if not then opposite</li>
+          </ol>
+          <li>First card: swipe any direction</li>
           <h2>Controls :</h2>
           <ul>
             <li>Mouse / Touch swipe or keyboard arrows</li>
@@ -226,8 +223,8 @@
       <p class="heading">Instructions</p>
       <p class="round_instruct">Chapter 3 - The Dot and colour!</p>
       <p class="round_descrip">
-        <h2>How to play :</h2>
-        <ul>
+        <h2 class="round_descrip">How to play :</h2>
+        <ul class="round_descrip">
           <li>Remember card (shape and color)</li>
           <li>Compare the current card with previous one</li>
           <li>There are two cases:</li>
