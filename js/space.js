@@ -12,7 +12,7 @@ pumpkin.src = "https://nikhilphalange.github.io/Oasis-Event/images/skull2.png";
 var sun = new Image();
 sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hippie_grp.png';
 var gun = new Image();
-gun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/guitar2.png';
+gun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/guitar2_new.png';
 var music = new Image();
 music.src = 'https://nikhilphalange.github.io/Oasis-Event/images/music.png'
 var spriteExplosion = new Image();
@@ -203,8 +203,8 @@ function game() {
             gun,
             player.posX*4,
             player.posY,
-            player.width*4,
-            player.height
+            player.width*6,
+            player.height*3
         );
 
         ctx.restore();
@@ -271,7 +271,7 @@ function game() {
                     pumpkin,
                     -(asteroids[i].width / asteroids[i].size) / 2,
                     asteroids[i].moveY += 1/(asteroids[i].size),
-                    asteroids[i].width*4 / (asteroids[i].size),
+                    asteroids[i].width*2 / (asteroids[i].size),
                     asteroids[i].height / (asteroids[i].size)
                 );
 
