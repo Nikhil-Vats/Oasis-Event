@@ -11,6 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
         console.log(user);
         user1 = user;
+        name = user1.displayName;
         createUser(user1);
     } else {
     console.log('User login failed');
@@ -48,7 +49,7 @@ function createUser(user1) {
         }
         else {
             db.collection("users").doc(user1.displayName).set({
-                name: user1.displayName,
+                name: name,
                 email: user1.email,
                 score: 0,
                 chapter_status: 1
