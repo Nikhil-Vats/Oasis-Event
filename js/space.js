@@ -203,7 +203,7 @@ function game() {
         ctx.rotate(player.deg);
         ctx.drawImage(
             gun,
-            player.posX*4,
+            player.posX*7,
             player.posY,
             player.width*1,
             player.height*2
