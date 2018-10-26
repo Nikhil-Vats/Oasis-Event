@@ -10,11 +10,13 @@ var sprite = new Image();
 var pumpkin = new Image();
 pumpkin.src = "https://nikhilphalange.github.io/Oasis-Event/images/skull_latest.png";
 var sun = new Image();
-sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hippie_grp.png';
+sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hippie_grp2.png';
 var gun = new Image();
 gun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/guitar_new.png';
 var music = new Image();
-music.src = 'https://nikhilphalange.github.io/Oasis-Event/images/music.png'
+music.src = 'https://nikhilphalange.github.io/Oasis-Event/images/music.png';
+var startBtn = new Image();
+startBtn.src = 'https://nikhilphalange.github.io/Oasis-Event/images/start_btn';
 var spriteExplosion = new Image();
 sprite.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/600764/sprite.png';
 window.onload = function() {
@@ -201,10 +203,10 @@ function game() {
         ctx.rotate(player.deg);
         ctx.drawImage(
             gun,
-            player.posX*3,
+            player.posX,
             player.posY,
-            player.width*3,
-            player.height*4
+            player.width*2,
+            player.height*3
         );
 
         ctx.restore();
@@ -375,7 +377,7 @@ function game() {
                 ctx.fillText(''+destroyed+'', cW/2,cH/2);
 
             } else {
-                ctx.drawImage(sprite, 428, 12, 70, 70, cW/2 - 35, cH/2 - 35, 70,70);
+                ctx.drawImage(startBtn, cW/2 - 35, cH/2 - 35, 70,70);
             }
         } else if(count < 1) {
             count = 1;
