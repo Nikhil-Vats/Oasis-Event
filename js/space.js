@@ -201,10 +201,10 @@ function game() {
         ctx.rotate(player.deg);
         ctx.drawImage(
             gun,
-            player.posX,
+            player.posX*3,
             player.posY,
-            player.width*8,
-            player.height*7
+            player.width*3,
+            player.height*4
         );
 
         ctx.restore();
@@ -271,8 +271,8 @@ function game() {
                     pumpkin,
                     -(asteroids[i].width / asteroids[i].size) / 2,
                     asteroids[i].moveY += 1/(asteroids[i].size),
-                    asteroids[i].width / (asteroids[i].size),
-                    asteroids[i].height / (asteroids[i].size)
+                    asteroids[i].width*0.9 / (asteroids[i].size),
+                    asteroids[i].height*1.3 / (asteroids[i].size)
                 );
 
                 ctx.restore();
