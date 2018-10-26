@@ -36,8 +36,11 @@ function createUser(user1) {
                     if(doc.data().chapter_status == Number(no)) {
                         console.log('Right page');
                     }
-                    else
-                    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_' + doc.data().chapter_status + '.html';
+                    else if(doc.data().chapter_status!=6)
+                        window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_' + doc.data().chapter_status + '.html';
+                    else if(doc.data().chapter_status == 6) {
+                        window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/results.html';    
+                    }
             })
             .catch(function(error) {
                 console.log("Error getting documents: ", error);
