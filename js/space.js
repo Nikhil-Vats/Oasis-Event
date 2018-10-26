@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", game);
 //General sprite load
 var sprite = new Image();
 var pumpkin = new Image();
-pumpkin.src = "https://nikhilphalange.github.io/Oasis-Event/images/skull2.png";
+pumpkin.src = "https://nikhilphalange.github.io/Oasis-Event/images/skull_new.png";
 var sun = new Image();
 sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hippie_grp.png';
 var gun = new Image();

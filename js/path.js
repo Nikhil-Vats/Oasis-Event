@@ -345,6 +345,6 @@ app.end = function(win) {
 app.launchScreen(
   0,
   "Path finder",
-  "Find the nearest yellow dot.",
+  "Find the nearest yellow dot, if you click the green dot game will be over.",
   "PLAY"
 );
