@@ -138,8 +138,8 @@ function game() {
                     music,
                     bullets[i].x,
                     bullets[i].y -= 20,
-                    19,
-                    30
+                    39,
+                    50
                 );
 
                 ctx.restore();
@@ -203,10 +203,10 @@ function game() {
         ctx.rotate(player.deg);
         ctx.drawImage(
             gun,
-            player.posX,
+            player.posX*4,
             player.posY,
-            player.width*2,
-            player.height*3
+            player.width*1,
+            player.height*2
         );
 
         ctx.restore();
