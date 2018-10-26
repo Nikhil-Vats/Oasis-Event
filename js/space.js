@@ -8,11 +8,11 @@ window.addEventListener("DOMContentLoaded", game);
 //General sprite load
 var sprite = new Image();
 var pumpkin = new Image();
-pumpkin.src = "https://nikhilphalange.github.io/Oasis-Event/images/skull_webd.png";
+pumpkin.src = "https://nikhilphalange.github.io/Oasis-Event/images/skull2.png";
 var sun = new Image();
 sun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/hippie_grp.png';
 var gun = new Image();
-gun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/guitar.png';
+gun.src = 'https://nikhilphalange.github.io/Oasis-Event/images/guitar2.png';
 var music = new Image();
 music.src = 'https://nikhilphalange.github.io/Oasis-Event/images/music.png'
 var spriteExplosion = new Image();
