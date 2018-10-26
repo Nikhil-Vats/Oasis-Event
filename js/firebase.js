@@ -219,10 +219,10 @@ function submitEvent() {
 
         db.collection("chapter1").doc(i.toString())
         .set({
-            tapA : tapAold[i] + tapANew,
-            tapB : tapBold[i] + tapBNew,
-            tapC : tapCold[i] + tapCNew,
-            tapD : tapDold[i] + tapDNew,
+            tapA : Number(tapAold[i]) + Number(tapANew),
+            tapB : Number(tapBold[i]) + Number(tapBNew),
+            tapC : Number(tapCold[i]) + Number(tapCNew),
+            tapD : Number(tapDold[i]) + Number(tapDNew),
         }, {merge: true})
         .then(function(doc){
             console.log("Document successfully written!");
