@@ -385,7 +385,7 @@ function game() {
                 ctx.fillText(''+destroyed+'', cW/2,cH/2);
 
             } else {
-                ctx.drawImage(startBtn, cW/2 - 35, cH/2 - 35, 70,70);
+                ctx.drawImage(sprite, 428, 12, 70, 70, cW/2 - 35, cH/2 - 35, 70,70);
             }
         } else if(count < 1) {
             count = 1;
