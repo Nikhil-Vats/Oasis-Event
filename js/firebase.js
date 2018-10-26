@@ -48,7 +48,7 @@ function getScore(name,email) {
         }
     })
     .catch(function(error) {
-        window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/index.html';
+        window.location.href = 'http://farout.ml/index.html';
         console.log("Error getting documents: ", error);
     });
 }
@@ -61,7 +61,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         getScore(user.displayName,user.email);
         checkStatus(ch_status);
     } else {
-        window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/index.html';
+        window.location.href = 'http://farout.ml/index.html';
     }
 });
 }

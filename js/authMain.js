@@ -38,9 +38,9 @@ function createUser(user1) {
                         console.log('Right page');
                     }
                     else if(doc.data().chapter_status!=6)
-                        window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_' + doc.data().chapter_status + '.html';
+                        window.location.href = 'http://farout.ml/chapter_' + doc.data().chapter_status + '.html';
                     else if(doc.data().chapter_status == 6) {
-                        window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/results.html';    
+                        window.location.href = 'http://farout.ml/results.html';    
                     }
             })
             .catch(function(error) {
@@ -55,7 +55,7 @@ function createUser(user1) {
                 chapter_status: 1
               }).then(function() {
                 console.log("Document successfully written!");
-                    window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_1.html';
+                    window.location.href = 'http://farout.ml/chapter_1.html';
                 })
                 .catch(function(error) {
                     console.error("Error writing document: ", error);
@@ -71,7 +71,7 @@ function createUser(user1) {
         chapter_status: 1
       }).then(function() {
         console.log("Document successfully written!");
-            window.location.href = 'https://nikhilphalange.github.io/Oasis-Event/chapter_1.html';
+            window.location.href = 'http://farout.ml/chapter_1.html';
         })
         .catch(function(error) {
             console.error("Error writing document: ", error);
